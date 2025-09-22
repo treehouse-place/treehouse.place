@@ -1,34 +1,44 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="showcase">
+      <section className="image-section">
+        <div className="image-placeholder">
+          <p>Treehouse Image</p>
+        </div>
+      </section>
+
+      <section className="content-section">
+        <div className="content-top">
+          <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
+          <p>come inside and create with us</p>
+
+          <div className="session-photos">
+            <figure className="photo-placeholder">
+              <img src="/about/about3.avif" alt="Team photo 3" className="photo" />
+              <img src="/about/about1.avif" alt="Team photo 1" className="photo" />
+              <img src="/about/about2.avif" alt="Team photo 2" className="photo" />
+
+            </figure>
+          </div>
+          <p>
+            Coworking space for passion projects and big dreams.
+          </p>
+          <h3>SFU Surrey
+          </h3>
+          <p>Every Thursday | 5pm to 8pm</p>
+        </div>
+
+        <div className="content-bottom">
+
+
+        </div>
+      </section>
+    </div>
+
   )
 }
 

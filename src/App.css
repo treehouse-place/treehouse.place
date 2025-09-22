@@ -1,42 +1,121 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.showcase {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #E4E3E1;
+    position: relative;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Left - Treehouse section */
+.image-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-placeholder {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    background: #f0f0f0;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.image-placeholder p {
+    color: #666;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
 }
 
-.card {
-  padding: 2em;
+/* Right - Content section */
+.content-section {
+    flex: 2;
+    padding: 3rem;
+    color: black;
+    position: relative;
 }
 
-.read-the-docs {
-  color: #888;
+.content-top {
+    font-size: 1.4rem;
+    /* line-height: 1.2; */
+    margin: 0;
+    width: 100%;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+}
+
+.content-top strong {
+    color: black;
+    font-weight: 700;
+}
+
+.treehouse-logo {
+    height: 120px;
+}
+
+.session-photos {
+    position: relative;
+    margin: 2rem 0;
+}
+
+.photo-placeholder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1rem;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+
+.photo {
+    display: block;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 8px 8px 8px rgba(0,0,0,0.3);
+    background: transparent;
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.photo:nth-child(1) {
+    transform: rotate(-15deg);
+    top: 20px;
+    left: 0px;
+    z-index: 3;
+}
+
+.photo:nth-child(2) {
+    transform: rotate(5deg);
+    top: 80px;
+    left: -50px;
+    z-index: 2;
+}
+
+.photo:nth-child(3) {
+    transform: rotate(15deg);
+    top: 40px;
+    left: 250px;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .showcase {
+        flex-direction: column;
+    }
 }
