@@ -15,7 +15,11 @@ function App() {
 
       <section className="content-section">
         <div className="content-top">
-          <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
+          <div className="content-top-logos">
+            <img src="/about/branch1.svg" alt="Branch 1" className="branch-logo" />
+            <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
+            <img src="/about/branch2.svg" alt="Branch 2" className="branch-logo" />
+          </div>
 
           <div className="session-photos">
             <figure className="photo-placeholder">
@@ -27,7 +31,7 @@ function App() {
           </div>
           <p>
             We host weekly coworking sessions for side quests
-            and big dreams — whether you're a maker, artist, engineer,
+            and big dreams — whether you're a maker, artist, engineer,
             designer, writer, poet, or somewhere in between.
             Everyone is welcome here.
           </p>
