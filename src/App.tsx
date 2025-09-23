@@ -36,8 +36,7 @@ function App() {
             Everyone is welcome here.
           </p>
           <p>
-
-          <button id="lock-in-button">LOCK IN?</button>
+          <a href="https://luma.com/treehouse.place" target="_blank" rel="noopener noreferrer" id="lock-in-button">LOCK IN?</a>
           </p>
           
           <div className="location-time">

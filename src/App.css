@@ -162,6 +162,8 @@ html, body {
 }
 
 #lock-in-button {
+    display: inline-block;
+    text-decoration: none;
     background: #E4E3E1;
     border: 2px solid #333;
     padding: 12px 24px;
