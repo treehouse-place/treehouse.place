@@ -1,5 +1,7 @@
-import { useState } from 'react'
 import './App.css'
+import { FaLocationDot } from "react-icons/fa6";
+import { IoTime } from "react-icons/io5";
+
 
 function App() {
 
@@ -14,7 +16,6 @@ function App() {
       <section className="content-section">
         <div className="content-top">
           <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
-          <p>come inside and create with us</p>
 
           <div className="session-photos">
             <figure className="photo-placeholder">
@@ -25,16 +26,24 @@ function App() {
             </figure>
           </div>
           <p>
-            Coworking space for passion projects and big dreams.
+            Treehouse is a creative coworking space for side quests
+            and big dreams — whether you're a maker, artist, engineer,
+            designer, writer, poet, or somewhere in between.
+            Everyone is welcome here.
           </p>
-          <h3>SFU Surrey
-          </h3>
-          <p>Every Thursday | 5pm to 8pm</p>
-        </div>
+          <p>
 
-        <div className="content-bottom">
-
-
+          <button>Lock in?</button>
+          </p>
+          
+          <div className="location-time">
+            <span>
+              <FaLocationDot /> SFU Surrey
+            </span>
+            <span>
+              <IoTime /> Thursday, 5pm-8pm
+            </span>
+          </div>
         </div>
       </section>
     </div>

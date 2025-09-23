@@ -41,19 +41,23 @@
 /* Right - Content section */
 .content-section {
     flex: 2;
-    padding: 3rem;
+    padding: 2rem;
     color: black;
     position: relative;
 }
 
 .content-top {
     font-size: 1.4rem;
-    /* line-height: 1.2; */
     margin: 0;
     width: 100%;
     color: black;
     font-weight: 400;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .content-top strong {
@@ -112,6 +116,13 @@
     top: 40px;
     left: 250px;
     z-index: 1;
+}
+
+.location-time {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1rem;
 }
 
 @media (max-width: 768px) {
