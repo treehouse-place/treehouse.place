@@ -187,11 +187,15 @@ html, body {
     outline: none;
 }
 
-.location-time {
+.location-time, .location-time span {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     gap: 1rem;
+}
+
+.location-time span {
+    gap: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -234,8 +238,9 @@ html, body {
 
     .location-time {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         margin-top: 1rem;
+        margin-left: 1rem;
     }
 }

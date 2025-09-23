@@ -42,10 +42,12 @@ function App() {
           
           <div className="location-time">
             <span>
-              <FaLocationDot /> SFU Surrey
+              <FaLocationDot /> 
+              <span>SFU Surrey</span>
             </span>
             <span>
-              <IoTime /> Thursday, 5pm-8pm
+              <IoTime /> 
+              <span>Thursday, 5-8pm</span>
             </span>
           </div>
         </div>
