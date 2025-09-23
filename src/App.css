@@ -109,6 +109,10 @@
     height: 120px;
 }
 
+.branch-logo {
+    height: 150px;
+}
+
 .session-photos {
     position: relative;
     margin: 2rem 0;
