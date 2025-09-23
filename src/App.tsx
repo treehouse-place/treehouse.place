@@ -26,14 +26,14 @@ function App() {
             </figure>
           </div>
           <p>
-            Treehouse is a creative coworking space for side quests
+            We host weekly coworking sessions for side quests
             and big dreams — whether you're a maker, artist, engineer,
             designer, writer, poet, or somewhere in between.
             Everyone is welcome here.
           </p>
           <p>
 
-          <button>Lock in?</button>
+          <button id="lock-in-button">LOCK IN?</button>
           </p>
           
           <div className="location-time">
