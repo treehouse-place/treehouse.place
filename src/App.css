@@ -1,25 +1,26 @@
-html, body {
+:root {
     background: #E4E3E1;
-    background-image: 
+    background-image:
         url('/about/nodes1.svg'),
         url('/about/nodes2.svg'),
         url('/about/nodes3.svg'),
         url('/about/nodes4.svg'),
         url('/about/nodes5.svg'),
-        linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px);
+        linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
     background-size: 200px, 200px, 200px, 200px, 200px, 70px 70px, 70px 70px;
     background-position: top left, center right, bottom right, bottom left, bottom center, 0 0, 0 0;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
 }
 
 #root {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
-    height: auto;
 }
 
 .showcase {
@@ -61,7 +62,7 @@ html, body {
 .image-placeholder p {
     color: #666;
     font-size: 1.2rem;
-    font-weight: 400;           
+    font-weight: 400;
     margin: 0;
 }
 
@@ -123,14 +124,14 @@ html, body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    
+
 }
 
 .photo {
     display: block;
     height: 200px;
     object-fit: cover;
-    box-shadow: 8px 8px 8px rgba(0,0,0,0.3);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
     background: transparent;
     font-size: 2rem;
     transition: transform 0.3s ease;
@@ -189,7 +190,8 @@ html, body {
     outline: none;
 }
 
-.location-time, .location-time span {
+.location-time,
+.location-time span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -232,11 +234,11 @@ html, body {
     .branch-logo {
         height: 80px;
     }
-    
+
     .content-section {
         padding: 1rem 0;
     }
-    
+
     .content-text {
         font-size: 1rem;
     }
@@ -244,7 +246,7 @@ html, body {
     .content-top {
         padding-top: 1rem;
     }
-    
+
     .image-section {
         padding: 1rem;
     }
