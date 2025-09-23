@@ -158,7 +158,7 @@ html, body {
 }
 
 .content-text {
-    max-width: 800px;
+    max-width: min(800px, 85vw);
 }
 
 #lock-in-button {
@@ -200,7 +200,25 @@ html, body {
     gap: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .showcase {
+        flex-direction: column-reverse;
+    }
+
+    .treehouse-logo {
+        height: 100px;
+    }
+
+    .branch-logo {
+        height: 120px;
+    }
+
+    .photo {
+        height: 150px;
+    }
+}
+
+@media (max-width: 640px) {
     .showcase {
         flex-direction: column-reverse;
         background-size: 120px, 120px, 120px, 120px, 120px, 50px 50px, 50px 50px;
@@ -215,10 +233,6 @@ html, body {
         height: 80px;
     }
     
-    .image-placeholder {
-        height: 200px;
-    }
-
     .content-section {
         padding: 1rem 0;
     }
@@ -226,6 +240,7 @@ html, body {
     .content-text {
         font-size: 1rem;
     }
+
     .content-top {
         padding-top: 1rem;
     }
