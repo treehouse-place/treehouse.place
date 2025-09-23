@@ -6,9 +6,16 @@
     padding: 0;
     background: #E4E3E1;
     background-image: 
+        url('/about/nodes1.svg'),
+        url('/about/nodes2.svg'),
+        url('/about/nodes3.svg'),
+        url('/about/nodes4.svg'),
+        url('/about/nodes5.svg'),
         linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px);
-    background-size: 70px 70px;
+    background-size: 200px, 200px, 200px, 200px, 200px, 70px 70px, 70px 70px;
+    background-position: top left, center right, bottom right, bottom left, bottom center, 0 0, 0 0;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
     position: relative;
 }
 
@@ -168,5 +175,19 @@
 @media (max-width: 768px) {
     .showcase {
         flex-direction: column;
+        background-size: 120px, 120px, 120px, 120px, 120px, 50px 50px, 50px 50px;
+        background-position: top left, top right, bottom right, bottom left, bottom center, 0 0, 0 0;
+    }
+    
+    .content-section {
+        padding: 1rem;
+    }
+    
+    .content-top {
+        padding-top: 1rem;
+    }
+    
+    .image-section {
+        padding: 1rem;
     }
 }
