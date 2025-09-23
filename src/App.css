@@ -209,6 +209,10 @@ html, body {
         height: 80px;
     }
     
+    .image-placeholder {
+        height: 200px;
+    }
+
     .content-section {
         padding: 1rem 0;
     }
@@ -226,5 +230,12 @@ html, body {
 
     .photo {
         height: 100px;
+    }
+
+    .location-time {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
     }
 }
