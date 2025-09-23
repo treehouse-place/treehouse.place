@@ -29,7 +29,7 @@ function App() {
 
             </figure>
           </div>
-          <p>
+          <p className="content-text">
             We host weekly coworking sessions for side quests
             and big dreams — whether you're a maker, artist, engineer,
             designer, writer, poet, or somewhere in between.
