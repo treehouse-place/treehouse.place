@@ -126,6 +126,15 @@ body, #root {
     height: 150px;
 }
 
+.tagline {
+    font-size: 1.2rem;
+    color: #1C2629;
+    margin: 0.5rem 0 1rem 0;
+    font-weight: 400;
+    text-align: center;
+    font-family: serif;
+}
+
 .session-photos {
     position: relative;
     margin: 1rem 0;
@@ -176,7 +185,103 @@ body, #root {
 }
 
 .content-text {
-    max-width: min(800px, 85vw);
+    max-width: min(600px, 65vw);
+    margin: 1rem 0;
+}
+
+.content-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #1C2629;
+    margin: 0;
+    text-align: left;
+}
+
+.event-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 2rem;
+    gap: 3rem;
+}
+
+.location-and-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.location, .schedule {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #1C2629;
+    font-weight: 500;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.lock-in-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #FFF8F5;
+    border: 2px solid #1C2629;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #1C2629;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-weight: 500;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.lock-in-button:hover {
+    background: #1C2629;
+    color: #FFF8F5;
+    transform: translateY(-2px);
+}
+
+.lock-icon {
+    font-size: 0.9rem;
+}
+
+.donate-button-main {
+    background: #1C2629;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.donate-button-main:hover {
+    background: #2a3a3d;
+    transform: translateY(-2px);
 }
 
 #lock-in-button {
@@ -207,17 +312,6 @@ body, #root {
     outline: none;
 }
 
-.location-time,
-.location-time span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.location-time span {
-    gap: 0.5rem;
-}
 
 /* Who We Are Section */
 .who-we-are-section {
@@ -277,7 +371,7 @@ body, #root {
 }
 
 .who-we-are-content p {
-    font-size: 64px;
+    font-size: 2.5rem;
     color: #1C2629;
     line-height: 1.6;
 }
@@ -311,14 +405,14 @@ body, #root {
 }
 
 .how-it-works-left {
-    flex: 1;
+    flex: 4;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .how-it-works-right {
-    flex: 1;
+    flex: 6;
 }
 
 .curved-text {
@@ -326,7 +420,7 @@ body, #root {
     flex-direction: column;
     align-items: center;
     font-family: serif;
-    font-size: 64px;
+    font-size: 2.5rem;
     color: #1C2629;
     line-height: 1;
 }
@@ -347,15 +441,15 @@ body, #root {
 }
 
 .text-dots {
-    font-size: 24px;
+    font-size: 1rem;
     color: #1C2629;
-    letter-spacing: 20px;
+    letter-spacing: 0.5rem;
     margin: 5px 0;
 }
 
 .process-text {
     font-family: serif;
-    font-size: 64px;
+    font-size: 2.5rem;
     color: #1C2629;
     line-height: 1.6;
 }
@@ -419,7 +513,7 @@ body, #root {
 .connect-content {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     margin-top: 1rem;
 }
 
@@ -427,9 +521,14 @@ body, #root {
     flex-shrink: 0;
 }
 
+.instagram-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
 .connect-text {
     font-family: serif;
-    font-size: 64px;
+    font-size: 2.5rem;
     color: #1C2629;
     line-height: 1.6;
 }
@@ -474,8 +573,8 @@ body, #root {
     font-weight: 600;
     margin-bottom: 1rem;
     color: #1C2629;
-    background: #FFF8F5;
-    border: 1px solid #594E45;
+    background: transparent;
+    border: 1px solid #1C2629;
     border-radius: 8px;
     padding: 8px 16px;
     display: inline-flex;
@@ -528,6 +627,10 @@ body, #root {
         height: 120px;
     }
 
+    .tagline {
+        font-size: 1.1rem;
+    }
+
     .photo {
         height: 150px;
     }
@@ -547,7 +650,7 @@ body, #root {
     .who-we-are-content h2 {
         font-size: 1.6rem;
         margin-bottom: 0.8rem;
-        text-align: center;
+        text-align: left;
         background: #FFF8F5;
         border: 1px solid #594E45;
         border-radius: 8px;
@@ -562,9 +665,9 @@ body, #root {
     }
 
     .who-we-are-content p {
-        font-size: 48px;
+        font-size: 2rem;
         line-height: 1.5;
-        text-align: center;
+        text-align: left;
     }
 
     .how-it-works-section {
@@ -587,22 +690,22 @@ body, #root {
     }
 
     .curved-text {
-        font-size: 48px;
+        font-size: 2rem;
     }
 
     .text-dots {
-        font-size: 18px;
-        letter-spacing: 15px;
+        font-size: 0.8rem;
+        letter-spacing: 0.4rem;
     }
 
     .process-text {
-        font-size: 48px;
+        font-size: 2rem;
     }
 
     .how-it-works-content h2 {
         font-size: 1.6rem;
         margin-bottom: 0.8rem;
-        text-align: center;
+        text-align: left;
         background: #FFF8F5;
         border: 1px solid #594E45;
         border-radius: 8px;
@@ -639,9 +742,9 @@ body, #root {
     .connect-with-us-content h2 {
         font-size: 1.6rem;
         margin-bottom: 0.8rem;
-        text-align: center;
-        background: #FFF8F5;
-        border: 1px solid #594E45;
+        text-align: left;
+        background: transparent;
+        border: 1px solid #1C2629;
         border-radius: 8px;
         padding: 8px 16px;
         display: inline-flex;
@@ -666,11 +769,50 @@ body, #root {
     .connect-content {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.5rem;
+        gap: 1rem;
     }
 
     .connect-text {
-        font-size: 48px;
+        font-size: 2rem;
+    }
+
+    .instagram-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .event-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .location-and-buttons {
+        width: 100%;
+    }
+
+    .action-buttons {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lock-in-button,
+    .donate-button-main {
+        width: auto;
+        min-width: 150px;
+    }
+
+    .event-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .action-buttons {
+        align-self: stretch;
+        justify-content: center;
     }
 }
 
@@ -690,6 +832,10 @@ body, #root {
 
     .branch-logo {
         height: 80px;
+    }
+
+    .tagline {
+        font-size: 1rem;
     }
 
     .content-section {
@@ -712,13 +858,6 @@ body, #root {
         height: 100px;
     }
 
-    .location-time {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        margin-top: 1rem;
-        margin-left: 1rem;
-    }
 
     .who-we-are-section {
         padding: 1rem 0.5rem;
@@ -742,7 +881,7 @@ body, #root {
     .who-we-are-content h2 {
         font-size: 1.4rem;
         margin-bottom: 0.8rem;
-        text-align: center;
+        text-align: left;
         background: #FFF8F5;
         border: 1px solid #594E45;
         border-radius: 8px;
@@ -757,10 +896,10 @@ body, #root {
     }
 
     .who-we-are-content p {
-        font-size: 32px;
+        font-size: 1.5rem;
         line-height: 1.4;
-        text-align: center;
-        margin: 0 auto;
+        text-align: left;
+        margin: 0;
     }
 
     .how-it-works-section {
@@ -783,22 +922,22 @@ body, #root {
     }
 
     .curved-text {
-        font-size: 32px;
+        font-size: 1.5rem;
     }
 
     .text-dots {
-        font-size: 12px;
-        letter-spacing: 10px;
+        font-size: 0.6rem;
+        letter-spacing: 0.3rem;
     }
 
     .process-text {
-        font-size: 32px;
+        font-size: 1.5rem;
     }
 
     .how-it-works-content h2 {
         font-size: 1.4rem;
         margin-bottom: 0.8rem;
-        text-align: center;
+        text-align: left;
         background: #FFF8F5;
         border: 1px solid #594E45;
         border-radius: 8px;
@@ -815,8 +954,8 @@ body, #root {
     .how-it-works-content p {
         font-size: 0.9rem;
         line-height: 1.4;
-        text-align: center;
-        margin: 0 auto;
+        text-align: left;
+        margin: 0;
     }
 
     .connect-with-us-section {
@@ -836,9 +975,9 @@ body, #root {
     .connect-with-us-content h2 {
         font-size: 1.4rem;
         margin-bottom: 0.8rem;
-        text-align: center;
-        background: #FFF8F5;
-        border: 1px solid #594E45;
+        text-align: left;
+        background: transparent;
+        border: 1px solid #1C2629;
         border-radius: 8px;
         padding: 6px 12px;
         display: inline-flex;
@@ -853,8 +992,8 @@ body, #root {
     .connect-with-us-content p {
         font-size: 0.9rem;
         line-height: 1.4;
-        text-align: center;
-        margin: 0 auto;
+        text-align: left;
+        margin: 0;
     }
 
     .connect-with-us-content .contact-info {
@@ -872,11 +1011,58 @@ body, #root {
     .connect-content {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.3rem;
+        gap: 0.8rem;
     }
 
     .connect-text {
-        font-size: 32px;
+        font-size: 1.5rem;
+    }
+
+    .instagram-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .event-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .location-and-buttons {
+        width: 100%;
+        align-items: center;
+    }
+
+    .location-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .lock-in-button,
+    .donate-button-main {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem;
+    }
+
+    .lock-in-button,
+    .donate-button-main {
+        width: 100%;
+        justify-content: center;
     }
 }
 

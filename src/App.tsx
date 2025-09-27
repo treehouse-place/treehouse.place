@@ -22,6 +22,7 @@ function App() {
               <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
               <img src="/about/branch2.svg" alt="Branch 2" className="branch-logo" />
             </div>
+            <p className="tagline">come inside and create with us</p>
 
             <div className="session-photos">
               <figure className="photo-placeholder">
@@ -31,25 +32,29 @@ function App() {
 
               </figure>
             </div>
-            <p className="content-text">
-              We host weekly coworking sessions for side quests
-              and big dreams — whether you're a maker, artist, engineer,
-              designer, writer, poet, or somewhere in between.
-              Everyone is welcome here.
-            </p>
-            <p>
-            <a href="https://luma.com/treehouse.place" target="_blank" rel="noopener noreferrer" id="lock-in-button">LOCK IN?</a>
-            </p>
-            
-            <div className="location-time">
-              <span>
-                <FaLocationDot /> 
-                <span>SFU Surrey</span>
-              </span>
-              <span>
-                <IoTime /> 
-                <span>Thursday, 5-8pm</span>
-              </span>
+            <div className="event-details">
+              <div className="content-text">
+                <p>Treehouse is a creative coworking space for side quests and big dreams—whether you're a maker, artist, engineer, designer, writer, poet, or somewhere in between. Everyone is welcome here.</p>
+              </div>
+              <div className="location-and-buttons">
+                <div className="location-info">
+                  <div className="location">
+                    <FaLocationDot /> 
+                    <span>SFU Surrey</span>
+                  </div>
+                  <div className="schedule">
+                    <IoTime /> 
+                    <span>Every Thursday | 5pm to 8pm</span>
+                  </div>
+                </div>
+                <div className="action-buttons">
+                  <a href="https://luma.com/treehouse.place" target="_blank" rel="noopener noreferrer" className="lock-in-button">
+                    <span>Lock in with us</span>
+                    <span className="lock-icon">🔒</span>
+                  </a>
+                  <button className="donate-button-main">Donate</button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -84,9 +89,12 @@ function App() {
                 <span>then a</span>
                 <span className="highlighted">50-minute</span>
                 <span>work block,</span>
+                <br/>
                 <span>break time,</span>
+                <br/>
                 <span className="highlighted">50-minutes</span>
                 <span>of work,</span>
+                <br/>
                 <span>and demos!</span>
               </div>
             </div>
