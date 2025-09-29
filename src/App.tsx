@@ -1,41 +1,35 @@
 import './App.css'
+import { useEffect } from "react";
 import { FaLocationDot } from "react-icons/fa6";
-import { IoTime } from "react-icons/io5";
+// import { IoTime } from "react-icons/io5";
 import { IoHelpCircle } from "react-icons/io5";
+import { IoMail } from "react-icons/io5";
 
 
 function App() {
+  useEffect(() => {
+    if ((window as any).CircleType) {
+      new (window as any).CircleType(document.getElementById("curved-text")).radius(200);
+      new (window as any).CircleType(document.getElementById("curved-text-small")).radius(200).dir(-1);
+    }
+  }, []);
 
   return (
     <div className="showcase">
       <div className="main-content">
-        <section className="image-section">
+        {/* <section className="image-section">
           <div className="image-placeholder">
             <p>Treehouse Image</p>
           </div>
-        </section>
+        </section> */}
 
         <section className="content-section">
           <div className="content-top">
             <div className="content-top-logos">
-              <img src="/about/branch1.svg" alt="Branch 1" className="branch-logo" />
               <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
-              <img src="/about/branch2.svg" alt="Branch 2" className="branch-logo" />
             </div>
             <p className="tagline">come inside and create with us</p>
-
-            <div className="session-photos">
-              <figure className="photo-placeholder">
-                <img src="/about/about3.avif" alt="Team photo 3" className="photo" />
-                <img src="/about/about1.avif" alt="Team photo 1" className="photo" />
-                <img src="/about/about2.avif" alt="Team photo 2" className="photo" />
-
-              </figure>
-            </div>
             <div className="event-details">
-              <div className="content-text">
-                <p>Treehouse is a creative coworking space for side quests and big dreams—whether you're a maker, artist, engineer, designer, writer, poet, or somewhere in between. Everyone is welcome here.</p>
-              </div>
               <div className="location-and-buttons">
                 <div className="location-info">
                   <div className="location">
@@ -43,7 +37,6 @@ function App() {
                     <span>SFU Surrey</span>
                   </div>
                   <div className="schedule">
-                    <IoTime /> 
                     <span>Every Thursday | 5pm to 8pm</span>
                   </div>
                 </div>
@@ -52,7 +45,6 @@ function App() {
                     <span>Lock in with us</span>
                     <span className="lock-icon">🔒</span>
                   </a>
-                  <button className="donate-button-main">Donate</button>
                 </div>
               </div>
             </div>
@@ -80,9 +72,8 @@ function App() {
           <div className="how-it-works-text-container">
             <div className="how-it-works-left">
               <div className="curved-text">
-                <div className="text-arc top-arc">introduction</div>
+                <p id="curved-text">introduction circle</p>
                 <div className="text-dots">• •</div>
-                <div className="text-arc bottom-arc">circle</div>
               </div>
             </div>
             <div className="how-it-works-right">
@@ -93,18 +84,20 @@ function App() {
                 <br/>
                 <span>break time,</span>
                 <br/>
+                <span>another </span>
                 <span className="highlighted">50-minutes</span>
                 <span>of work,</span>
                 <br/>
                 <span>and demos!</span>
+                <p>People connect better when they get to talk about what matters most to them. Treehouse is a space for you to make stuff that you care about, away from school and work.</p>
               </div>
-            </div>
+            </div>           
           </div>
         </div>
       </section>
       <section className="connect-with-us-section">
         <div className="connect-with-us-content">
-          <h2>connect with us</h2>
+          <h2><IoMail /> connect with us</h2>
           <div className="connect-content">
             <div className="instagram-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,13 +107,16 @@ function App() {
             <div className="connect-text">
               <span>we are part of the </span>
               <span className="highlighted">friends of</span>
-              <span> </span>
+              <br></br>
               <span className="underlined">socratica</span>
-              <span>, a live co-working session at waterloo</span>
+              <span>, a live co-working </span>
+              <br></br>
+              <span>session started at waterloo</span>
             </div>
           </div>
           <div className="connect-buttons">
             <button className="donate-button">Donate</button>
+            <p id="curved-text-small">help us run our sessions</p>
           </div>
         </div>
       </section>
