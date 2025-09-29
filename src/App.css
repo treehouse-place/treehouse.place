@@ -336,21 +336,26 @@ body, #root {
 
 .who-we-are-text-container {
     display: flex;
-    width: 100%;
-    gap: 2rem;
-    margin-top: 1rem;
+    padding: 1rem 4rem;
+    flex-direction: column;
 }
 
 .who-we-are-left {
-    flex: 1;
-    position: relative;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 0;
 }
 
 .who-we-are-right {
-    flex: 1;
-    position: relative;
+    text-align: right;
+    font-size: 1.5rem;
+    line-height: 1.6;
 }
 
+.who-we-are-left,
+.who-we-are-right {
+    position: relative;
+}
 
 .who-we-are-content h2 {
     font-size: 2rem;
@@ -647,6 +652,18 @@ body, #root {
         gap: 1rem;
     }
 
+    .who-we-are-left {
+        text-align: left;
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .who-we-are-right {
+        text-align: right;
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+
     .who-we-are-content h2 {
         font-size: 1.6rem;
         margin-bottom: 0.8rem;
@@ -876,6 +893,18 @@ body, #root {
     .who-we-are-text-container {
         flex-direction: column;
         gap: 0.8rem;
+    }
+
+    .who-we-are-left {
+        text-align: left;
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .who-we-are-right {
+        text-align: right;
+        font-size: 1.5rem;
+        line-height: 1.6;
     }
 
     .who-we-are-content h2 {

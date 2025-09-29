@@ -64,12 +64,13 @@ function App() {
         <div className="who-we-are-content">
           <h2><IoHelpCircle /> who we are</h2>
           <div className="who-we-are-text-container">
-            <div className="who-we-are-left">
-              <p>Treehouse is a creative coworking space for side quests and big dreams—</p>
-            </div>
-            <div className="who-we-are-right">
-              <p>whether you're a maker, artist, engineer, designer, writer, poet, or somewhere in between.</p>
-            </div>
+            <p className="who-we-are-left">Treehouse is a creative</p>
+            <p className="who-we-are-left">coworking space for side</p>
+            <p className="who-we-are-left">quests and big dreams—</p>
+            <p className="who-we-are-right">whether you're a maker,</p>
+            <p className="who-we-are-right">artist, engineer, designer,</p>
+            <p className="who-we-are-right">writer, poet, or</p>
+            <p className="who-we-are-right">somewhere in between.</p>
           </div>
         </div>
       </section>
