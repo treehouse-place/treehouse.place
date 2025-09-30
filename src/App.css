@@ -31,8 +31,7 @@
   font-style: normal;
 }
 
-
-body, #root {
+#root {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -40,6 +39,14 @@ body, #root {
     overflow-y: auto;
     font-family: "Shippori Mincho", serif;
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
 
 .showcase {
     display: flex;
@@ -309,6 +316,7 @@ body, #root {
     width: 100%;
     box-sizing: border-box;
     padding: 1rem 10rem;
+    margin-bottom: 10rem;
 }
 
 .who-we-are-text-container {
@@ -388,6 +396,7 @@ body, #root {
     width: 100%;
     box-sizing: border-box;
     padding: 1rem 10rem;
+    margin-bottom: 10rem;
 }
 
 .how-it-works-text-container {
@@ -468,8 +477,9 @@ body, #root {
 }
 
 .how-it-works-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.6;
+    font-weight: 400
 }
 
 /* Connect With Us Section */
@@ -478,11 +488,8 @@ body, #root {
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    padding: 2rem;
-    margin: 4rem 10rem 4rem 0;
-    border-radius: 10px;
     min-height: 40vh;
-    background: transparent;
+    background: #262626;
     box-sizing: border-box;
 }
 
@@ -491,6 +498,7 @@ body, #root {
     text-align: left;
     width: 100%;
     box-sizing: border-box;
+    margin-top: 14em;
     padding: 1rem 10rem;
     margin-bottom: 12rem;
 }
@@ -510,6 +518,7 @@ body, #root {
 .instagram-icon svg {
     width: 48px;
     height: 48px;
+    fill: #FFF8F5;
 }
 
 .connect-text {
@@ -518,14 +527,20 @@ body, #root {
     font-size: 48px;
     line-height: 64px;
     letter-spacing: -0.04em;
-    color: #1C2629;
+    color: #FFF8F5;
     margin: 0rem 4rem
 }
 
-.highlighted {
+.highlighted-green {
+    color: #262626;
     background: #CFF6B3;
-    padding: 4px 8px;
-    border-radius: 4px;
+    padding: 0px 8px 8px;
+    border-radius: 0;
+}
+.highlighted-purple {
+    background: #B066B1;
+    padding: 0px 8px 8px;
+    border-radius: 0;
 }
 
 .underlined {
@@ -544,6 +559,7 @@ body, #root {
     padding: 16px 34px;
     font-weight: 600;
     font-size: 1.3rem;
+    border: 2px solid #FFF8F5;
     border-radius: 8px;
     cursor: pointer;
     font-family: "Inter", sans-serif;
@@ -559,9 +575,9 @@ body, #root {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #1C2629;
+    color: #FFF8F5;
     background: transparent;
-    border: 2px solid #1C2629;
+    border: 2px solid #FFF8F5;
     border-radius: 8px;
     padding: 8px 18px;
     display: inline-flex;
@@ -582,14 +598,6 @@ body, #root {
     margin-top: 1.5rem;
 }
 
-.connect-with-us-content .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.1rem;
-    color: #1C2629;
-}
-
 
 #curved-text {
   font-size: 2.5rem;
@@ -603,7 +611,7 @@ body, #root {
   font-weight: 700;
   text-align: right;
   font-family: "Inter", sans-serif;
-  color: #1C2629;
+  color: #FFF8F5;
 }
 
 @media (max-width: 1024px) {
