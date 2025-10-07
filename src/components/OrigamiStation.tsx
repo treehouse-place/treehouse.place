@@ -4,29 +4,31 @@ import frog from '../assets/origami/frog.png'
 import chameleon from '../assets/origami/chameleon.png'
 import star from '../assets/origami/star.png'
 
-const origamiItems = [
-  { title: 'Crane', image: crane, link: '#' },
-  { title: 'Chameleon', image: chameleon, link: '#' },
-  { title: 'Frog', image: frog, link: '#' },
-  { title: 'Star', image: star, link: '#' },
-]
-
-
 export default function OrigamiStation() {
+  const origamiItems = [
+    { title: 'Crane', image: crane, pdf: '/origami/crane.pdf' },
+    { title: 'Chameleon', image: chameleon, pdf: '/origami/chameleon.pdf' },
+    { title: 'Frog', image: frog, pdf: '/origami/frog.pdf' },
+    { title: 'Star', image: star, pdf: '/origami/star.pdf' },
+  ];
+
   return (
     <div className="origami-page">
       <h1>origami station</h1>
       <div className="origami-grid">
-        {origamiItems.map((item, index) => (
+        {origamiItems.map((item, i) => (
           <a
-            href={item.link}
+            key={i}
+            href={item.pdf}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`origami-tile tile-${item.title.toLowerCase()}`}
-            key={index}
-            >
+          >
             <img src={item.image} alt={item.title} />
-         </a>
+          </a>
         ))}
       </div>
     </div>
-  )
+  );
 }
+
