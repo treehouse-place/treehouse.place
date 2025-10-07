@@ -92,6 +92,11 @@ function App() {
             <p className="who-we-are-right">engineers, makers, and</p>
             <p className="who-we-are-right">everyone in between</p>
           </div>
+          <img
+          src="/about/pinkblocks.png"
+          alt="Z Dimension Illustration"
+          className="who-we-are-image"
+        />
         </div>
       </section>
 
