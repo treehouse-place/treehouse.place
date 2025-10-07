@@ -556,7 +556,18 @@ html, body {
     line-height: 64px;
     letter-spacing: -0.04em;
     color: #FFF8F5;
-    margin: 0rem 4rem
+    margin: 0rem 4rem;
+    max-width: min(15em, 100vw);
+
+    .highlighted-green {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .highlighted-purple {
+        width: fit-content;
+        margin: 0 auto;
+    }
 }
 
 .highlighted-green {
@@ -564,6 +575,12 @@ html, body {
     background: #CFF6B3;
     padding: 0px 8px 8px;
     border-radius: 0;
+    width: fit-content;
+}
+
+.connect-text .highlighted-green::after {
+    content: "\A";
+    white-space: pre;
 }
 .highlighted-purple {
     background: #B066B1;
@@ -795,6 +812,7 @@ html, body {
         letter-spacing: -0.04em;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .how-it-works-left {
@@ -893,18 +911,14 @@ html, body {
 
     .connect-content {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 1rem;
     }
 
-    .connect-text {
-        font-family: "Shippori Mincho", serif;
-        font-weight: 500;
-        font-size: 36px;
-        line-height: 48px;
-        letter-spacing: -0.04em;
-        display: flex;
-        flex-direction: column;
+    .connect-text .highlighted-green::after,
+    .connect-text .underlined::after {
+        content: "";
+        white-space: normal;
     }
 
     .connect-left {
@@ -1130,6 +1144,11 @@ html, body {
         line-height: 42px;
         letter-spacing: -0.04em;
         margin: 0;
+
+        .people-connect-text {
+            margin-top: 2rem;
+            font-size: 1rem;
+        }
     }
 
     .how-it-works-description {
@@ -1218,18 +1237,14 @@ html, body {
 
     .connect-content {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 0.8rem;
     }
 
-    .connect-text {
-        font-family: "Shippori Mincho", serif;
-        font-weight: 500;
-        font-size: 32px;
-        line-height: 42px;
-        letter-spacing: -0.04em;
-        display: flex;
-        flex-direction: column;
+    .connect-text .highlighted-green::after,
+    .connect-text .underlined::after {
+        content: "";
+        white-space: normal;
     }
 
     .connect-left {

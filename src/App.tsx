@@ -113,17 +113,17 @@ function App() {
             <div className="how-it-works-right">
               <div className="process-text">
                 <span>then a</span>
-                <span className="highlighted-green">50-minute</span>
+                <span className="highlighted-green">50 minutes</span>
                 <span>work block,</span>
                 <br/>
                 <span>break time,</span>
                 <br/>
                 <span>another </span>
-                <span className="highlighted-green">50-minutes</span>
+                <span className="highlighted-green">50 minutes</span>
                 <span>of work,</span>
                 <br/>
                 <span>and demos!</span>
-                <p>People connect better when they get to talk about what matters most to them. Treehouse is a space for you to make stuff that you care about, away from school and work.</p>
+                <p className="people-connect-text">People connect better when they get to talk about what matters most to them. Treehouse is a space for you to make stuff that you care about, away from school and work.</p>
               </div>
             </div>
           </div>
@@ -153,10 +153,8 @@ function App() {
             <div className="connect-text">
               <span>we are part of the </span>
               <span className="highlighted-green">friends of</span>
-              <br />
               <span className="underlined highlighted-purple">socratica</span>
               <span>, a live co-working </span>
-              <br />
               <span>session started at waterloo</span>
             </div>
           </div>
