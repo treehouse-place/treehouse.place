@@ -484,6 +484,7 @@ html, body {
 
 /* Connect With Us Section */
 .connect-with-us-section {
+    position: relative;              
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -491,6 +492,7 @@ html, body {
     min-height: 40vh;
     background: #262626;
     box-sizing: border-box;
+    overflow: hidden;                
 }
 
 .connect-with-us-content {
@@ -501,6 +503,8 @@ html, body {
     margin-top: 14em;
     padding: 1rem 10rem;
     margin-bottom: 12rem;
+    z-index: 2;
+    position: relative;
 }
 
 .connect-content {
@@ -548,8 +552,12 @@ html, body {
 }
 
 .connect-buttons {
-    margin-top: 2rem;
-    margin-left: 8rem;
+  margin-left: 9rem;
+  display: flex;
+  flex-direction: column;  /* stack items vertically */
+  align-items: flex-start; /* keep it left aligned */
+  gap: 0.4rem;             /* small spacing between button and text */
+  position: relative;
 }
 
 .donate-button {
@@ -598,6 +606,51 @@ html, body {
     margin-top: 1.5rem;
 }
 
+.connect-image {
+  position: absolute;
+  bottom: 14rem; /* aligns it to bottom */
+  left: 68%;
+  transform: translateX(-50%);
+  width: 30%; /* adjust size */
+  max-width: 800px;
+  z-index: 0; /* sends image behind */
+}
+
+.connect-buttons #curved-text-small {
+  margin-left: 12rem;
+  text-align: left;
+  transform: rotate(-45deg);          /* remove the previous rotate */
+  position: relative;       /* ensure it sits normally below */
+  left: 0;
+  top: 0.5rem;
+  color: #FFF8F5;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+.instagram-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: #FFF8F5;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+.connect-subtext-wrap {
+  display: inline-block;       
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+.connect-subtext {
+  margin: 0;
+}
+
+
 
 #curved-text {
   font-size: 2.5rem;
@@ -606,13 +659,7 @@ html, body {
   color: #1C2629;
 }
 
-#curved-text-small {
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: right;
-  font-family: "Inter", sans-serif;
-  color: #FFF8F5;
-}
+
 
 @media (max-width: 1024px) {
     .main-content {

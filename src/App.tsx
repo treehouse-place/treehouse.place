@@ -1,19 +1,46 @@
 import './App.css'
 import { useEffect } from "react";
 import { FaLocationDot } from "react-icons/fa6";
-// import { IoTime } from "react-icons/io5";
 import { IoHelpCircle } from "react-icons/io5";
 import { IoMail } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
-
 
 function App() {
   useEffect(() => {
     if ((window as any).CircleType) {
       new (window as any).CircleType(document.getElementById("curved-text")).radius(200);
-      new (window as any).CircleType(document.getElementById("curved-text-small")).radius(200).dir(-1);
+      const small = document.getElementById("curved-text-small");
+      if (small) {
+        // tighten tracking before/after CircleType runs
+        small.style.letterSpacing = "-1em";   // tweak: -0.02em to -0.06em
+        small.style.whiteSpace    = "nowrap";
+        new (window as any).CircleType(small).radius(150).dir(-1); // smaller than 300
+      }
+      const smallConnect = document.getElementById("connect-subtext-curved");
+      if (smallConnect) {
+        // tighten tracking before/after CircleType runs
+        smallConnect.style.letterSpacing = "-0.04em";   // tweak: -0.02em to -0.06em
+        smallConnect.style.whiteSpace    = "nowrap";
+        new (window as any).CircleType(small).radius(150).dir(-1); // smaller than 300
+      }
+
     }
   }, []);
+
+  useEffect(() => {
+  if ((window as any).CircleType) {
+    const el = document.getElementById("connect-subtext-curved");
+    if (el) {
+      el.style.whiteSpace = "nowrap";
+      el.style.letterSpacing = "-0.04em"; // tighten a bit; tweak -0.02em..-0.06em
+
+      new (window as any).CircleType(el)
+        .radius(130)  // smaller = tighter curve
+        .dir(1);      // 1 = curve downwards (smile turned upside-down)
+    }
+  }
+}, []);
+
 
   return (
     <div className="showcase">
@@ -34,7 +61,7 @@ function App() {
               <div className="location-and-buttons">
                 <div className="location-info">
                   <div className="location">
-                    <FaLocationDot /> 
+                    <FaLocationDot />
                     <span>SFU Surrey</span>
                   </div>
                   <div className="schedule">
@@ -57,16 +84,17 @@ function App() {
         <div className="who-we-are-content">
           <h2><IoHelpCircle /> who we are</h2>
           <div className="who-we-are-text-container">
-            <p className="who-we-are-left">Treehouse is a creative</p>
-            <p className="who-we-are-left">coworking space for side</p>
+            <p className="who-we-are-intro">​Ideas grow better in the</p>
+            <p className="who-we-are-left">treehouse — a creative</p>
+            <p className="who-we-are-left">coworking space</p>
             <p className="who-we-are-left">quests and big dreams—</p>
-            <p className="who-we-are-right">whether you're a maker,</p>
-            <p className="who-we-are-right">artist, engineer, designer,</p>
-            <p className="who-we-are-right">writer, poet, or</p>
-            <p className="who-we-are-right">somewhere in between.</p>
+            <p className="who-we-are-right">for the artists, developers,</p>
+            <p className="who-we-are-right">engineers, makers, and</p>
+            <p className="who-we-are-right">everyone in between</p>
           </div>
         </div>
       </section>
+
       <section className="how-it-works-section">
         <div className="how-it-works-content">
           <h2><IoHelpCircle /> how it works</h2>
@@ -92,35 +120,47 @@ function App() {
                 <span>and demos!</span>
                 <p>People connect better when they get to talk about what matters most to them. Treehouse is a space for you to make stuff that you care about, away from school and work.</p>
               </div>
-            </div>           
+            </div>
           </div>
         </div>
       </section>
+
+      {/* CONNECT WITH US */}
       <section className="connect-with-us-section">
+        {/* the text/content block */}
         <div className="connect-with-us-content">
           <h2><IoMail /> connect with us</h2>
           <div className="connect-content">
-            <div className="instagram-icon">
-              <FaInstagram />
+            <div className="instagram-stack">
+              <p id="connect-subtext-curved" className="connect-subtext">our instagram here</p>
+              <div className="instagram-icon">
+                <FaInstagram />
+              </div>
             </div>
             <div className="connect-text">
               <span>we are part of the </span>
               <span className="highlighted-green">friends of</span>
-              <br></br>
+              <br />
               <span className="underlined highlighted-purple">socratica</span>
               <span>, a live co-working </span>
-              <br></br>
+              <br />
               <span>session started at waterloo</span>
             </div>
           </div>
           <div className="connect-buttons">
             <button className="donate-button">Donate</button>
-            <p id="curved-text-small">help us run our sessions</p>
+            <p id="curved-text-small" className="donate-subtext">help us run our sessions</p>
           </div>
         </div>
+
+        {/* the image sits as a sibling, absolutely positioned behind */}
+        <img
+          src="/about/blackgrid.png"
+          alt="Z Dimension Illustration"
+          className="connect-image"
+        />
       </section>
     </div>
-
   )
 }
 
