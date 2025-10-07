@@ -21,7 +21,7 @@ function App() {
         // tighten tracking before/after CircleType runs
         smallConnect.style.letterSpacing = "-0.04em";   // tweak: -0.02em to -0.06em
         smallConnect.style.whiteSpace    = "nowrap";
-        new (window as any).CircleType(small).radius(150).dir(-1); // smaller than 300
+        new (window as any).CircleType(smallConnect).radius(150).dir(-1); // smaller than 300
       }
 
     }
@@ -138,9 +138,17 @@ function App() {
           <div className="connect-content">
             <div className="instagram-stack">
               <p id="connect-subtext-curved" className="connect-subtext">our instagram here</p>
-              <div className="instagram-icon">
-                <FaInstagram />
-              </div>
+              <a
+                href="https://www.instagram.com/thetreehouse.place/"   // <-- put your real IG URL
+                target="_blank"
+                rel="noopener noreferrer"
+                className="instagram-icon-link"
+                aria-label="Open our Instagram"
+              >
+                <div className="instagram-icon">
+                  <FaInstagram />
+                </div>
+              </a>
             </div>
             <div className="connect-text">
               <span>we are part of the </span>

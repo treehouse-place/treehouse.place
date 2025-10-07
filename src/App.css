@@ -439,9 +439,11 @@ html, body {
 }
 
 .text-dots {
+    margin-top: -2rem;
+    margin-left: 2rem;
     font-size: 4rem;
     color: #1C2629;
-    letter-spacing: 0.5rem;
+    letter-spacing: 2rem;
 }
 
 .process-text {
@@ -456,9 +458,10 @@ html, body {
 .how-it-works-right p {
     margin-top: 6rem;
     letter-spacing: 0;
-    font-size: 1rem;
+    font-size: 2rem;
     font-family: "Inter", sans-serif;
     color: #1C2629;
+    letter-spacing: -0.05rem;
 }
 
 .highlighted {
@@ -528,10 +531,22 @@ html, body {
     flex-shrink: 0;
 }
 
+.instagram-icon-link {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+.instagram-icon-link:hover .instagram-icon svg,
+.instagram-icon-link:focus-visible .instagram-icon svg {
+  transform: scale(1.06);
+}
+
 .instagram-icon svg {
-    width: 48px;
-    height: 48px;
-    fill: #FFF8F5;
+  width: 48px;
+  height: 48px;
+  fill: #FFF8F5;
+  transition: transform 0.2s ease;
 }
 
 .connect-text {
@@ -586,6 +601,7 @@ html, body {
 .donate-button:hover {
     background: #2a3a3d;
     transform: translateY(-2px);
+    border: #FFF8F5;
 }
 
 .connect-with-us-content h2 {
