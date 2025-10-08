@@ -590,6 +590,12 @@ html, body {
 
 .underlined {
     text-decoration: underline;
+    color: white;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: black;
+    }
 }
 
 .connect-buttons {
@@ -608,7 +614,7 @@ html, body {
     padding: 16px 34px;
     font-weight: 600;
     font-size: 1.3rem;
-    border: 2px solid #FFF8F5;
+    border: 1px solid #FFF8F5;
     border-radius: 8px;
     cursor: pointer;
     font-family: "Inter", sans-serif;
@@ -616,9 +622,8 @@ html, body {
 }
 
 .donate-button:hover {
-    background: #2a3a3d;
     transform: translateY(-2px);
-    border: #FFF8F5;
+    border: 1px solid #FFF8F5;
 }
 
 .connect-with-us-content h2 {
@@ -791,6 +796,10 @@ html, body {
         line-height: 48px;
         letter-spacing: -0.04em;
         text-align: left;
+    }
+    
+    .who-we-are-image {
+        display: none;
     }
 
     .how-it-works-section {

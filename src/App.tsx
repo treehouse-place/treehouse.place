@@ -153,13 +153,16 @@ function App() {
             <div className="connect-text">
               <span>we are part of the </span>
               <span className="highlighted-green">friends of</span>
-              <span className="underlined highlighted-purple">socratica</span>
+
+              <a href="https://socratica.info" target="_blank" rel="noopener noreferrer" className="underlined highlighted-purple">socratica</a>
               <span>, a live co-working </span>
               <span>session started at waterloo</span>
             </div>
           </div>
           <div className="connect-buttons">
-            <button className="donate-button">Donate</button>
+            <a href="https://www.socratica.com/donate" target="_blank" rel="noopener noreferrer">
+              <button className="donate-button">Donate</button>
+            </a>
             <p id="curved-text-small" className="donate-subtext">help us run our sessions</p>
           </div>
         </div>
