@@ -69,7 +69,7 @@ html, body {
     min-height: 100vh;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 /* Left - Treehouse section */
@@ -120,7 +120,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0.8rem;
 
     strong {
@@ -226,7 +226,7 @@ html, body {
     gap: 0.5rem;
     font-size: 1.25rem;
     color: #1C2629;
-    font-weight: 500;
+    font-weight: 800;
 }
 
 .action-buttons {
@@ -444,7 +444,9 @@ html, body {
     flex: 6;
 
     .people-connect-text {
-        max-width: min(35em, 70vw);
+        font-size: 1.1rem;
+        max-width: min(35em, 60vw);
+        text-align: center;
     }
 }
 
@@ -452,6 +454,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-bottom: 10rem;
 }
 
@@ -478,7 +481,7 @@ html, body {
 }
 
 .how-it-works-right p {
-    margin-top: 6rem;
+    margin-top: 4rem;
     letter-spacing: 0;
     font-size: 2rem;
     font-family: "Inter", sans-serif;
@@ -715,9 +718,6 @@ html, body {
         margin: 0;
         font-family: "Shippori Mincho", serif;
     }
-    .main-content {
-        flex-direction: column-reverse;
-    }
 
     .treehouse-logo {
         height: 100px;
@@ -814,11 +814,6 @@ html, body {
         gap: 0.5rem;
     }
 
-    .text-dots {
-        font-size: 0.8rem;
-        letter-spacing: 0.4rem;
-    }
-
     .process-text {
         font-family: "Shippori Mincho", serif;
         font-weight: 500;
@@ -848,6 +843,10 @@ html, body {
         line-height: 48px;
         letter-spacing: -0.04em;
         margin: 0;
+    }
+
+    .curved-text {
+        margin-bottom: 5rem;
     }
 
     .how-it-works-description {
@@ -948,13 +947,6 @@ html, body {
         margin-top: 1.5rem;
     }
 
-    .treehouse-hero-image {
-        max-height: 450px;
-        max-width: 110%;
-        transform: scale(1.05);
-        border-radius: 8px;
-    }
-
     .lock-in-button,
     .donate-button-main {
         width: auto;
@@ -974,10 +966,7 @@ html, body {
 }
 
 @media (max-width: 640px) {
-    .main-content {
-        flex-direction: column-reverse;
-    }
-    
+
     .showcase {
         background-size: 120px, 120px, 120px, 120px, 120px, 50px 50px, 50px 50px;
         background-position: top left, top right, bottom right, bottom left, bottom center, 0 0, 0 0;
@@ -1100,11 +1089,6 @@ html, body {
 
     .curved-text {
         font-size: 1.5rem;
-    }
-
-    .text-dots {
-        font-size: 0.6rem;
-        letter-spacing: 0.3rem;
     }
 
     .process-text {
@@ -1255,13 +1239,6 @@ html, body {
 
     .hero-image-container {
         margin-top: 1rem;
-    }
-
-    .treehouse-hero-image {
-        max-height: 350px;
-        max-width: 105%;
-        transform: scale(1.02);
-        border-radius: 6px;
     }
 
     .lock-in-button,
