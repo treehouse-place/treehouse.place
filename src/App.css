@@ -424,6 +424,10 @@ html, body {
 
 .how-it-works-right {
     flex: 6;
+
+    .people-connect-text {
+        max-width: min(35em, 70vw);
+    }
 }
 
 .curved-text {
