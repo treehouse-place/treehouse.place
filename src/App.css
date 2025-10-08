@@ -341,6 +341,7 @@ html, body {
 .who-we-are-text-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-top: 2rem;
 }
 
@@ -736,6 +737,7 @@ html, body {
     }
 
     .who-we-are-content {
+        margin-top: 3rem;
         max-width: 90vw;
         width: 100%;
         padding: 0 0.5rem;
@@ -745,6 +747,8 @@ html, body {
     .who-we-are-text-container {
         flex-direction: column;
         gap: 1rem;
+        justify-content: center;
+        align-items: center;
     }
 
     .who-we-are-left {
@@ -1121,7 +1125,7 @@ html, body {
         margin: 0;
 
         .people-connect-text {
-            margin-top: 2rem;
+            margin-top: 4rem;
             font-size: 1rem;
         }
     }
