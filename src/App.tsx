@@ -159,12 +159,14 @@ function App() {
               <span>session started at waterloo</span>
             </div>
           </div>
-          <div className="connect-buttons">
+
+          {/* DONATE BUTTON - TEMPORARILY DISABLED DUE TO POSITIONING ISSUES */}
+          {/* <div className="connect-buttons">
             <a href="https://www.socratica.com/donate" target="_blank" rel="noopener noreferrer">
               <button className="donate-button">Donate</button>
             </a>
             <p id="curved-text-small" className="donate-subtext">help us run our sessions</p>
-          </div>
+          </div> */}
         </div>
 
         {/* the image sits as a sibling, absolutely positioned behind */}
