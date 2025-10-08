@@ -76,6 +76,9 @@ function App() {
                 </div>
               </div>
             </div>
+            <div className="hero-image-container">
+              <img src="/treehouse-hero.webp" alt="Treehouse Hero" className="treehouse-hero-image" />
+            </div>
           </div>
         </section>
       </div>
