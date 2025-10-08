@@ -445,8 +445,8 @@ html, body {
     flex: 6;
 
     .people-connect-text {
-        font-size: 1.1rem;
-        max-width: min(35em, 60vw);
+        font-size: 1.2rem;
+        max-width: min(35em, 80vw);
         text-align: center;
     }
 }
@@ -706,19 +706,6 @@ html, body {
 
 
 @media (max-width: 1024px) {
-
-    /* :root {
-        background-image:
-            linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-        background-size: 50px 50px, 50px 50px;   
-        background-repeat: repeat, repeat;
-        max-width: 100vw;
-        width: 100%;
-        overflow-x: hidden;
-        margin: 0;
-        font-family: "Shippori Mincho", serif;
-    } */
 
     .treehouse-logo {
         height: 100px;
@@ -1126,7 +1113,6 @@ html, body {
 
         .people-connect-text {
             margin-top: 4rem;
-            font-size: 1rem;
         }
     }
 
