@@ -1,7 +1,7 @@
 :root {
     background: #FFF8F5;
     background-image:
-        url('/about/nodes1.svg'),
+        url('/about/nodes3.svg'),
         url('/about/nodes2.svg'),
         url('/about/nodes3.svg'),
         url('/about/nodes4.svg'),
@@ -707,7 +707,7 @@ html, body {
 
 @media (max-width: 1024px) {
 
-    :root {
+    /* :root {
         background-image:
             linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
@@ -718,7 +718,7 @@ html, body {
         overflow-x: hidden;
         margin: 0;
         font-family: "Shippori Mincho", serif;
-    }
+    } */
 
     .treehouse-logo {
         height: 100px;
