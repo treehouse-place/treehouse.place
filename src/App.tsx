@@ -13,14 +13,14 @@ function App() {
       if (small) {
         // tighten tracking before/after CircleType runs
         small.style.letterSpacing = "-1em";   // tweak: -0.02em to -0.06em
-        small.style.whiteSpace    = "nowrap";
+        small.style.whiteSpace = "nowrap";
         new (window as any).CircleType(small).radius(150).dir(-1); // smaller than 300
       }
       const smallConnect = document.getElementById("connect-subtext-curved");
       if (smallConnect) {
         // tighten tracking before/after CircleType runs
         smallConnect.style.letterSpacing = "-0.04em";   // tweak: -0.02em to -0.06em
-        smallConnect.style.whiteSpace    = "nowrap";
+        smallConnect.style.whiteSpace = "nowrap";
         new (window as any).CircleType(smallConnect).radius(150).dir(-1); // smaller than 300
       }
 
@@ -28,18 +28,18 @@ function App() {
   }, []);
 
   useEffect(() => {
-  if ((window as any).CircleType) {
-    const el = document.getElementById("connect-subtext-curved");
-    if (el) {
-      el.style.whiteSpace = "nowrap";
-      el.style.letterSpacing = "-0.04em"; // tighten a bit; tweak -0.02em..-0.06em
+    if ((window as any).CircleType) {
+      const el = document.getElementById("connect-subtext-curved");
+      if (el) {
+        el.style.whiteSpace = "nowrap";
+        el.style.letterSpacing = "-0.04em"; // tighten a bit; tweak -0.02em..-0.06em
 
-      new (window as any).CircleType(el)
-        .radius(130)  // smaller = tighter curve
-        .dir(1);      // 1 = curve downwards (smile turned upside-down)
+        new (window as any).CircleType(el)
+          .radius(130)  // smaller = tighter curve
+          .dir(1);      // 1 = curve downwards (smile turned upside-down)
+      }
     }
-  }
-}, []);
+  }, []);
 
 
   return (
@@ -52,35 +52,32 @@ function App() {
         </section> */}
 
         <section className="content-section">
-            <div className="content-top-logos">
-              <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
-            </div>
-            <p className="tagline">come inside and create with us</p>
-            <div className="event-details">
-              <div className="location-and-buttons">
-                <div className="location-info">
-                  <div className="location">
-                    <FaLocationDot />
-                    <span>SFU Surrey</span>
-                  </div>
-                  <div className="schedule">
-                    <span>Every Thursday | 5pm to 8pm</span>
-                  </div>
+          <div className="content-top-logos">
+            <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
+          </div>
+          <p className="tagline">come inside and create with us</p>
+          <div className="event-details">
+            <div className="location-and-buttons">
+              <div className="location-info">
+                <div className="location">
+                  <FaLocationDot />
+                  <span>SFU Surrey</span>
                 </div>
-                <div className="action-buttons">
-                  <a href="https://luma.com/treehouse.place" target="_blank" rel="noopener noreferrer" className="lock-in-button">
-                    <span>Lock in with us</span>
-                    <span className="lock-icon">🔒</span>
-                  </a>
-                  <a href="/origami-station" target="_blank" rel="noopener noreferrer" className="lock-in-button">
-                    <span>Mystery :o</span>
-                  </a>
+                <div className="schedule">
+                  <span>Every Thursday | 5pm to 8pm</span>
                 </div>
               </div>
+              <div className="action-buttons">
+                <a href="https://luma.com/treehouse.place" target="_blank" rel="noopener noreferrer" className="lock-in-button">
+                  <span>Lock in with us</span>
+                  <span className="lock-icon">🔒</span>
+                </a>
+              </div>
             </div>
-            <div className="hero-image-container">
-              <img src="/treehouse-hero.webp" alt="Treehouse Hero" className="treehouse-hero-image" />
-            </div>
+          </div>
+          <div className="hero-image-container">
+            <img src="/treehouse-hero.webp" alt="Treehouse Hero" className="treehouse-hero-image" />
+          </div>
         </section>
       </div>
 
@@ -97,10 +94,10 @@ function App() {
             <p className="who-we-are-right">everyone in between</p>
           </div>
           <img
-          src="/about/pinkblocks.png"
-          alt="Z Dimension Illustration"
-          className="who-we-are-image"
-        />
+            src="/about/pinkblocks.png"
+            alt="Z Dimension Illustration"
+            className="who-we-are-image"
+          />
         </div>
       </section>
 
@@ -119,13 +116,13 @@ function App() {
                 <span>then a</span>
                 <span className="highlighted-green">50 minutes</span>
                 <span>work block,</span>
-                <br/>
+                <br />
                 <span>break time,</span>
-                <br/>
+                <br />
                 <span>another </span>
                 <span className="highlighted-green">50 minutes</span>
                 <span>of work,</span>
-                <br/>
+                <br />
                 <span>and demos!</span>
                 <p className="people-connect-text">People connect better when they get to talk about what matters most to them. Treehouse is a space for you to make stuff that you care about, away from school and work.</p>
               </div>
@@ -179,7 +176,11 @@ function App() {
           alt="Z Dimension Illustration"
           className="connect-image"
         />
+        <a href="/origami-station" target="_blank" rel="noopener noreferrer" className="lock-in-button mystery-button">
+          <span>Mystery button!</span>
+        </a>
       </section>
+
     </div>
   )
 }

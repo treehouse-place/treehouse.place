@@ -703,7 +703,11 @@ html, body {
   color: #1C2629;
 }
 
-
+.mystery-button {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
 
 @media (max-width: 1024px) {
 
