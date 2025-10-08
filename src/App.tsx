@@ -73,6 +73,9 @@ function App() {
                     <span>Lock in with us</span>
                     <span className="lock-icon">🔒</span>
                   </a>
+                  <a href="/origami-station" target="_blank" rel="noopener noreferrer" className="lock-in-button">
+                    <span>Mystery :o</span>
+                  </a>
                 </div>
               </div>
             </div>
