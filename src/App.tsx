@@ -52,7 +52,6 @@ function App() {
         </section> */}
 
         <section className="content-section">
-          <div className="content-top">
             <div className="content-top-logos">
               <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
             </div>
@@ -79,7 +78,9 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
+            <div className="hero-image-container">
+              <img src="/treehouse-hero.webp" alt="Treehouse Hero" className="treehouse-hero-image" />
+            </div>
         </section>
       </div>
 
