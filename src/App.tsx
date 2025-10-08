@@ -1,58 +1,182 @@
 import './App.css'
+import { useEffect } from "react";
 import { FaLocationDot } from "react-icons/fa6";
-import { IoTime } from "react-icons/io5";
-
+import { IoHelpCircle } from "react-icons/io5";
+import { IoMail } from "react-icons/io5";
+import { FaInstagram } from "react-icons/fa";
 
 function App() {
+  useEffect(() => {
+    if ((window as any).CircleType) {
+      new (window as any).CircleType(document.getElementById("curved-text")).radius(200);
+      const small = document.getElementById("curved-text-small");
+      if (small) {
+        // tighten tracking before/after CircleType runs
+        small.style.letterSpacing = "-1em";   // tweak: -0.02em to -0.06em
+        small.style.whiteSpace    = "nowrap";
+        new (window as any).CircleType(small).radius(150).dir(-1); // smaller than 300
+      }
+      const smallConnect = document.getElementById("connect-subtext-curved");
+      if (smallConnect) {
+        // tighten tracking before/after CircleType runs
+        smallConnect.style.letterSpacing = "-0.04em";   // tweak: -0.02em to -0.06em
+        smallConnect.style.whiteSpace    = "nowrap";
+        new (window as any).CircleType(smallConnect).radius(150).dir(-1); // smaller than 300
+      }
+
+    }
+  }, []);
+
+  useEffect(() => {
+  if ((window as any).CircleType) {
+    const el = document.getElementById("connect-subtext-curved");
+    if (el) {
+      el.style.whiteSpace = "nowrap";
+      el.style.letterSpacing = "-0.04em"; // tighten a bit; tweak -0.02em..-0.06em
+
+      new (window as any).CircleType(el)
+        .radius(130)  // smaller = tighter curve
+        .dir(1);      // 1 = curve downwards (smile turned upside-down)
+    }
+  }
+}, []);
+
 
   return (
     <div className="showcase">
-      <section className="image-section">
-        <div className="image-placeholder">
-          <p>Treehouse Image</p>
+      <div className="main-content">
+        {/* <section className="image-section">
+          <div className="image-placeholder">
+            <p>Treehouse Image</p>
+          </div>
+        </section> */}
+
+        <section className="content-section">
+          <div className="content-top">
+            <div className="content-top-logos">
+              <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
+            </div>
+            <p className="tagline">come inside and create with us</p>
+            <div className="event-details">
+              <div className="location-and-buttons">
+                <div className="location-info">
+                  <div className="location">
+                    <FaLocationDot />
+                    <span>SFU Surrey</span>
+                  </div>
+                  <div className="schedule">
+                    <span>Every Thursday | 5pm to 8pm</span>
+                  </div>
+                </div>
+                <div className="action-buttons">
+                  <a href="https://luma.com/treehouse.place" target="_blank" rel="noopener noreferrer" className="lock-in-button">
+                    <span>Lock in with us</span>
+                    <span className="lock-icon">🔒</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section className="who-we-are-section">
+        <div className="who-we-are-content">
+          <h2 className="section-title"><IoHelpCircle /> who we are</h2>
+          <div className="who-we-are-text-container">
+            <p className="who-we-are-intro">​Ideas grow better in the</p>
+            <p className="who-we-are-left">treehouse — a creative</p>
+            <p className="who-we-are-left">coworking space</p>
+            <p className="who-we-are-left">quests and big dreams—</p>
+            <p className="who-we-are-right">for the artists, developers,</p>
+            <p className="who-we-are-right">engineers, makers, and</p>
+            <p className="who-we-are-right">everyone in between</p>
+          </div>
+          <img
+          src="/about/pinkblocks.png"
+          alt="Z Dimension Illustration"
+          className="who-we-are-image"
+        />
         </div>
       </section>
 
-      <section className="content-section">
-        <div className="content-top">
-          <div className="content-top-logos">
-            <img src="/about/branch1.svg" alt="Branch 1" className="branch-logo" />
-            <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
-            <img src="/about/branch2.svg" alt="Branch 2" className="branch-logo" />
-          </div>
-
-          <div className="session-photos">
-            <figure className="photo-placeholder">
-              <img src="/about/about3.avif" alt="Team photo 3" className="photo" />
-              <img src="/about/about1.avif" alt="Team photo 1" className="photo" />
-              <img src="/about/about2.avif" alt="Team photo 2" className="photo" />
-
-            </figure>
-          </div>
-          <p className="content-text">
-            We host weekly coworking sessions for side quests
-            and big dreams — whether you're a maker, artist, engineer,
-            designer, writer, poet, or somewhere in between.
-            Everyone is welcome here.
-          </p>
-          <p>
-          <a href="https://luma.com/treehouse.place" target="_blank" rel="noopener noreferrer" id="lock-in-button">LOCK IN?</a>
-          </p>
-          
-          <div className="location-time">
-            <span>
-              <FaLocationDot /> 
-              <span>SFU Surrey</span>
-            </span>
-            <span>
-              <IoTime /> 
-              <span>Thursday, 5-8pm</span>
-            </span>
+      <section className="how-it-works-section">
+        <div className="how-it-works-content">
+          <h2 className="section-title"><IoHelpCircle /> how it works</h2>
+          <div className="how-it-works-text-container">
+            <div className="how-it-works-left">
+              <div className="curved-text">
+                <p id="curved-text">introduction circle</p>
+                <div className="text-dots">• •</div>
+              </div>
+            </div>
+            <div className="how-it-works-right">
+              <div className="process-text">
+                <span>then a</span>
+                <span className="highlighted-green">50 minutes</span>
+                <span>work block,</span>
+                <br/>
+                <span>break time,</span>
+                <br/>
+                <span>another </span>
+                <span className="highlighted-green">50 minutes</span>
+                <span>of work,</span>
+                <br/>
+                <span>and demos!</span>
+                <p className="people-connect-text">People connect better when they get to talk about what matters most to them. Treehouse is a space for you to make stuff that you care about, away from school and work.</p>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
+
+      {/* CONNECT WITH US */}
+      <section className="connect-with-us-section">
+        {/* the text/content block */}
+        <div className="connect-with-us-content">
+          <h2 className="section-title"><IoMail /> connect with us</h2>
+          <div className="connect-content">
+            <div className="instagram-stack">
+              <p id="connect-subtext-curved" className="connect-subtext">our instagram here</p>
+              <a
+                href="https://www.instagram.com/thetreehouse.place/"   // <-- put your real IG URL
+                target="_blank"
+                rel="noopener noreferrer"
+                className="instagram-icon-link"
+                aria-label="Open our Instagram"
+              >
+                <div className="instagram-icon">
+                  <FaInstagram />
+                </div>
+              </a>
+            </div>
+            <div className="connect-text">
+              <span>we are part of the </span>
+              <span className="highlighted-green">friends of</span>
+
+              <a href="https://socratica.info" target="_blank" rel="noopener noreferrer" className="underlined highlighted-purple">socratica</a>
+              <span>, a live co-working </span>
+              <span>session started at waterloo</span>
+            </div>
+          </div>
+
+          {/* DONATE BUTTON - TEMPORARILY DISABLED DUE TO POSITIONING ISSUES */}
+          {/* <div className="connect-buttons">
+            <a href="https://www.socratica.com/donate" target="_blank" rel="noopener noreferrer">
+              <button className="donate-button">Donate</button>
+            </a>
+            <p id="curved-text-small" className="donate-subtext">help us run our sessions</p>
+          </div> */}
+        </div>
+
+        {/* the image sits as a sibling, absolutely positioned behind */}
+        <img
+          src="/about/blackgrid.png"
+          alt="Z Dimension Illustration"
+          className="connect-image"
+        />
       </section>
     </div>
-
   )
 }
 

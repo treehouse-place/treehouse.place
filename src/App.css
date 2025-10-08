@@ -1,5 +1,5 @@
 :root {
-    background: #E4E3E1;
+    background: #FFF8F5;
     background-image:
         url('/about/nodes1.svg'),
         url('/about/nodes2.svg'),
@@ -9,31 +9,67 @@
         linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
     background-size: 200px, 200px, 200px, 200px, 200px, 50px 50px, 50px 50px;
-    background-position: top left, center right, bottom right, bottom left, bottom center, 0 0, 0 0;
+    background-position: left 15%, right 25%, left 65%, right 75%, left 45%, 0 0, 0 0;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
     max-width: 100vw;
     width: 100%;
     overflow-x: hidden;
     margin: 0;
+    font-family: "Shippori Mincho", serif;
+}
+
+.shippori-mincho-medium {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #root {
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    font-family: "Shippori Mincho", serif;
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    box-sizing: border-box;
+}
+
 
 .showcase {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;  /* Flexbox items align from top */
+    flex-direction: column;  /* Stack sections vertically */
     width: 100vw;
     min-height: 100vh;
     max-width: 1500px;
     margin: 0;
     padding: 0;
     position: relative;
-    overflow: visible;
+    overflow-x: hidden;  /* Prevent horizontal overflow */
+    font-family: "Shippori Mincho", serif;
+}
+
+.main-content {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
 }
 
 /* Left - Treehouse section */
@@ -43,8 +79,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
     position: relative;
+    max-width: 400px;
 }
 
 .image-placeholder {
@@ -66,32 +103,33 @@
     margin: 0;
 }
 
-/* Right - Content section */
 .content-section {
     flex: 2;
-    padding: 2rem;
-    color: black;
+    padding: 1rem;
+    color: #1C2629;
     position: relative;
     min-width: 0;
+    max-width: 800px;
+    font-family: "Shippori Mincho", serif;
 }
 
 .content-top {
     font-size: 1.4rem;
     margin: 0;
     width: 100%;
-    color: black;
+    color: #1C2629;
     font-weight: 400;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    padding-top: 2rem;
+    gap: 0.8rem;
+    padding-top: 1rem;
 }
 
 .content-top strong {
-    color: black;
+    color: #1C2629;
     font-weight: 700;
 }
 
@@ -104,18 +142,26 @@
     height: 100px;
 }
 
-
 .treehouse-logo {
-    height: 120px;
+    height: 100px;
 }
 
 .branch-logo {
     height: 150px;
 }
 
+.tagline {
+    font-size: 1.5rem;
+    color: #1C2629;
+    margin: 0.5rem 0 1rem 0;
+    font-weight: 900;
+    text-align: center;
+    font-family: "Shippori Mincho", serif;
+}
+
 .session-photos {
     position: relative;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .photo-placeholder {
@@ -131,83 +177,523 @@
 
 }
 
-.photo {
-    display: block;
-    height: 200px;
-    object-fit: cover;
-    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
-    background: transparent;
-    font-size: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.photo:nth-child(1) {
-    transform: rotate(-15deg);
-    top: 20px;
-    left: 0px;
-    z-index: 3;
-}
-
-.photo:nth-child(2) {
-    transform: rotate(5deg);
-    top: 80px;
-    left: -50px;
-    z-index: 2;
-}
-
-.photo:nth-child(3) {
-    transform: rotate(15deg);
-    top: 40px;
-    left: 250px;
-    z-index: 1;
-}
-
 .content-text {
-    max-width: min(800px, 85vw);
+    max-width: min(600px, 65vw);
+    margin: 1rem 0;
+}
+
+.content-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #1C2629;
+    margin: 0;
+    text-align: left;
+}
+
+.event-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 3rem;
+}
+
+.location-and-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+    align-items: center;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.75rem;
+    color: #1C2629;
+    font-weight: 700;
+}
+
+ .schedule {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #1C2629;
+    font-weight: 500;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.lock-in-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #FFF8F5;
+    border: 2px solid #1C2629;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #1C2629;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-weight: 900;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.lock-in-button:hover {
+    background: #1C2629;
+    color: #FFF8F5;
+    transform: translateY(-2px);
+}
+
+.lock-icon {
+    font-size: 0.9rem;
 }
 
 #lock-in-button {
     display: inline-block;
     text-decoration: none;
     background: #E4E3E1;
-    border: 2px solid #333;
+    border: 2px solid #1C2629;
     padding: 12px 24px;
     font-size: 1rem;
-    color: #333;
+    color: #1C2629;
     cursor: pointer;
     border-radius: 8px;
-    box-shadow: 0 8px 0 #333;
+    box-shadow: 0 8px 0 #1C2629;
     transition: all 0.3s ease;
 }
 
 #lock-in-button:hover {
     transform: translateY(2px);
-    box-shadow: 0 6px 0 #333;
+    box-shadow: 0 6px 0 #1C2629;
 }
 
 #lock-in-button:active {
     transform: translateY(4px);
-    box-shadow: 0 2px 0 #333;
+    box-shadow: 0 2px 0 #1C2629;
 }
 
 #lock-in-button:focus {
     outline: none;
 }
 
-.location-time,
-.location-time span {
+
+/* Who We Are Section */
+.who-we-are-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem 0 4rem 0;
+    border-radius: 10px;
+    min-height: 40vh;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.who-we-are-content {
+    max-width: 100%;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 10rem;
+    margin-bottom: 10rem;
+    position: relative;
+}
+
+.who-we-are-text-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.who-we-are-left {
+    text-align: left;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -0.04em;
+}
+
+.who-we-are-right {
+    text-align: right;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -0.04em;
+}
+
+.who-we-are-left,
+.who-we-are-right {
+    position: relative;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1C2629;
+    background: #FFF8F5;
+    border: 2px solid #594E45;
+    border-radius: 8px;
+    padding: 8px 38px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Inter", sans-serif;
+    text-transform: lowercase;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.who-we-are-content p {
+    margin: 0;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -0.04em;
+    color: #1C2629;
+}
+
+.who-we-are-image {
+  position: absolute;
+  top: 10rem;         
+  right: 20rem;        
+  width: 20%;     
+  z-index: 1;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem 0 4rem 0;
+    border-radius: 10px;
+    min-height: 40vh;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.how-it-works-content {
+    max-width: 100%;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 10rem;
+    margin-bottom: 10rem;
+}
+
+.how-it-works-text-container {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.how-it-works-left {
+    flex: 4;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
 }
 
-.location-time span {
-    gap: 0.5rem;
+.how-it-works-right {
+    flex: 6;
 }
+
+.curved-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+.text-arc {
+    position: relative;
+    display: inline-block;
+}
+
+.text-dots {
+    margin-top: -2rem;
+    margin-left: 2rem;
+    font-size: 4rem;
+    color: #1C2629;
+    letter-spacing: 2rem;
+}
+
+.process-text {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -0.04em;
+    color: #1C2629;
+}
+
+.how-it-works-right p {
+    margin-top: 6rem;
+    letter-spacing: 0;
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    color: #1C2629;
+    letter-spacing: -0.05rem;
+}
+
+.highlighted {
+    background: #CFF6B3;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.how-it-works-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400
+}
+
+/* Connect With Us Section */
+.connect-with-us-section {
+    position: relative;              
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    background: #262626;
+    box-sizing: border-box;
+    overflow: hidden;                
+}
+
+.connect-with-us-content {
+    max-width: 100%;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 14em;
+    padding: 1rem 10rem;
+    margin-bottom: 12rem;
+    z-index: 2;
+    position: relative;
+}
+
+.connect-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    padding: 1rem 0;
+}
+
+.instagram-icon {
+    flex-shrink: 0;
+}
+
+.instagram-icon-link {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+.instagram-icon-link:hover .instagram-icon svg,
+.instagram-icon-link:focus-visible .instagram-icon svg {
+  transform: scale(1.06);
+}
+
+.instagram-icon svg {
+  width: 48px;
+  height: 48px;
+  fill: #FFF8F5;
+  transition: transform 0.2s ease;
+}
+
+.connect-text {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -0.04em;
+    color: #FFF8F5;
+    margin: 0rem 4rem;
+    max-width: min(15em, 100vw);
+
+    .highlighted-green {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .highlighted-purple {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+.highlighted-green {
+    color: #262626;
+    background: #CFF6B3;
+    padding: 0px 8px;
+    border-radius: 0;
+    width: fit-content;
+}
+
+.connect-text .highlighted-green::after {
+    content: "";
+    display: inline-block;
+    /* width: 100%; */
+}
+
+.highlighted-purple {
+    background: #B066B1;
+    padding: 0px 8px 8px;
+    border-radius: 0;
+}
+
+.underlined {
+    text-decoration: underline;
+    color: white;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: black;
+    }
+}
+
+.connect-buttons {
+  margin-left: 9rem;
+  display: flex;
+  flex-direction: column;  /* stack items vertically */
+  align-items: flex-start; /* keep it left aligned */
+  gap: 0.4rem;             /* small spacing between button and text */
+  position: relative;
+}
+
+.donate-button {
+    background: #1C2629;
+    color: white;
+    border: none;
+    padding: 16px 34px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    border: 1px solid #FFF8F5;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.donate-button:hover {
+    transform: translateY(-2px);
+    border: 1px solid #FFF8F5;
+}
+
+.connect-with-us-content .section-title {
+    color: #FFF8F5;
+    background: transparent;
+    border: 2px solid #FFF8F5;
+}
+
+.connect-with-us-content .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.connect-image {
+  position: absolute;
+  bottom: 20%; /* aligns it to bottom */
+  left: 68%;
+  transform: translateX(-50%);
+  width: min(50vw, 500px);
+  max-width: 800px;
+  z-index: 0; /* sends image behind */
+}
+
+.connect-buttons #curved-text-small {
+  margin-left: 12rem;
+  text-align: left;
+  transform: rotate(-45deg);          /* remove the previous rotate */
+  position: relative;       /* ensure it sits normally below */
+  left: 0;
+  top: 0.5rem;
+  color: #FFF8F5;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+.instagram-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: #FFF8F5;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+.connect-subtext-wrap {
+  display: inline-block;       
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+.connect-subtext {
+  margin: 0;
+}
+
+
+
+#curved-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1C2629;
+}
+
+
 
 @media (max-width: 1024px) {
-    .showcase {
+
+    :root {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+        background-size: 50px 50px, 50px 50px;   
+        background-repeat: repeat, repeat;
+        max-width: 100vw;
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        font-family: "Shippori Mincho", serif;
+    }
+    .main-content {
         flex-direction: column-reverse;
     }
 
@@ -219,14 +705,247 @@
         height: 120px;
     }
 
+    .tagline {
+        font-size: 1.1rem;
+    }
+
     .photo {
         height: 150px;
+    }
+
+    .who-we-are-content {
+        max-width: 90vw;
+        width: 100%;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .who-we-are-text-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .who-we-are-left {
+        text-align: left;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.04em;
+    }
+
+    .who-we-are-right {
+        text-align: left;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.04em;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+        text-align: left;
+        background: #FFF8F5;
+        border: 1px solid #594E45;
+        border-radius: 8px;
+        padding: 8px 16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: "Shippori Mincho", serif;
+        text-transform: lowercase;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .who-we-are-content p {
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.04em;
+        text-align: left;
+    }
+    
+    .who-we-are-image {
+        display: none;
+    }
+
+    .how-it-works-section {
+        padding: 1.5rem 1rem;
+        margin: 0.5rem 0 3rem 0;
+        min-height: auto;
+        width: 100%;
+    }
+
+    .how-it-works-content {
+        max-width: 90vw;
+        width: 100%;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .how-it-works-text-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .text-dots {
+        font-size: 0.8rem;
+        letter-spacing: 0.4rem;
+    }
+
+    .process-text {
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.04em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .how-it-works-left {
+        text-align: left;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.04em;
+        margin: 0;
+    }
+
+    .how-it-works-right {
+        text-align: left;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.04em;
+        margin: 0;
+    }
+
+    .how-it-works-description {
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.04em;
+        text-align: left;
+        margin: 0.5rem 0 0 0;
+    }
+
+    .how-it-works-content p {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .connect-with-us-section {
+        padding: 1.5rem 1rem;
+        margin: 0.5rem 0 3rem 0;
+        min-height: auto;
+        width: 100%;
+    }
+
+    .connect-with-us-content {
+        max-width: 90vw;
+        width: 100%;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .connect-with-us-content p {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .connect-with-us-content .contact-item {
+        font-size: 1rem;
+    }
+
+    .connect-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .connect-text .highlighted-green::after,
+    .connect-text .underlined::after {
+        content: "";
+        white-space: normal;
+    }
+
+    .connect-left {
+        text-align: left;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.04em;
+        margin: 0;
+    }
+
+    .connect-right {
+        text-align: left;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.04em;
+        margin: 0;
+    }
+
+    .instagram-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .event-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .location-and-buttons {
+        width: 100%;
+    }
+
+    .action-buttons {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lock-in-button,
+    .donate-button-main {
+        width: auto;
+        min-width: 150px;
+    }
+
+    .event-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .action-buttons {
+        align-self: stretch;
+        justify-content: center;
     }
 }
 
 @media (max-width: 640px) {
-    .showcase {
+    .main-content {
         flex-direction: column-reverse;
+    }
+    
+    .showcase {
         background-size: 120px, 120px, 120px, 120px, 120px, 50px 50px, 50px 50px;
         background-position: top left, top right, bottom right, bottom left, bottom center, 0 0, 0 0;
     }
@@ -237,6 +956,10 @@
 
     .branch-logo {
         height: 80px;
+    }
+
+    .tagline {
+        font-size: 1rem;
     }
 
     .content-section {
@@ -259,11 +982,261 @@
         height: 100px;
     }
 
-    .location-time {
+
+    .who-we-are-section {
+        padding: 1rem 0.5rem;
+        margin: 0.5rem 0 2rem 0;
+        min-height: auto;
+        width: 100%;
+    }
+
+    .who-we-are-content {
+        max-width: 95vw;
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .who-we-are-text-container {
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .who-we-are-left {
+        text-align: left;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -0.04em;
+    }
+
+    .who-we-are-right {
+        text-align: left;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -0.04em;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+        text-align: left;
+        background: #FFF8F5;
+        border: 1px solid #594E45;
+        border-radius: 8px;
+        padding: 6px 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: "Shippori Mincho", serif;
+        text-transform: lowercase;
+        font-weight: 400;
+    }
+
+    .who-we-are-content p {
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -0.04em;
+        text-align: left;
+        margin: 0;
+    }
+
+    .how-it-works-section {
+        padding: 1rem 0.5rem;
+        margin: 0.5rem 0 2rem 0;
+        min-height: auto;
+        width: 100%;
+    }
+
+    .how-it-works-content {
+        max-width: 95vw;
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .how-it-works-text-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .curved-text {
+        font-size: 1.5rem;
+    }
+
+    .text-dots {
+        font-size: 0.6rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .process-text {
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -0.04em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .how-it-works-left {
+        text-align: left;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -0.04em;
+        margin: 0;
+    }
+
+    .how-it-works-right {
+        text-align: left;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -0.04em;
+        margin: 0;
+
+        .people-connect-text {
+            margin-top: 2rem;
+            font-size: 1rem;
+        }
+    }
+
+    .how-it-works-description {
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -0.04em;
+        text-align: left;
+        margin: 0.5rem 0 0 0;
+    }
+
+    .how-it-works-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        text-align: left;
+        margin: 0;
+    }
+
+    .connect-with-us-section {
+        padding: 1rem 0.5rem;
+        margin: 0.5rem 0 0 0;
+        min-height: auto;
+        width: 100%;
+    }
+
+    .connect-with-us-content {
+        max-width: 95vw;
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+
+    .connect-with-us-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        text-align: left;
+        margin: 0;
+    }
+
+    .connect-with-us-content .contact-info {
+        gap: 0.8rem;
         margin-top: 1rem;
-        margin-left: 1rem;
+    }
+
+    .connect-with-us-content .contact-item {
+        font-size: 0.9rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.3rem;
+    }
+
+    .connect-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    /* .connect-text .highlighted-green::after,
+    .connect-text .underlined::after {
+        content: "";
+        white-space: normal;
+    } */
+
+    .connect-left {
+        text-align: left;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -0.04em;
+        margin: 0;
+    }
+
+    .connect-right {
+        text-align: left;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -0.04em;
+        margin: 0;
+    }
+
+    .instagram-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .event-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .location-and-buttons {
+        width: 100%;
+        align-items: center;
+    }
+
+    .location-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .lock-in-button,
+    .donate-button-main {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem;
+    }
+
+    .lock-in-button,
+    .donate-button-main {
+        width: 100%;
+        justify-content: center;
     }
 }
+

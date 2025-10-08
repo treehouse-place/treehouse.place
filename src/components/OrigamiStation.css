@@ -1,0 +1,72 @@
+.origami-page {
+  padding: 2rem;
+  text-align: left;
+}
+
+.origami-page h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.origami-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 600px; /* Optional: keeps grid centered and tidy */
+  margin-inline: auto;
+}
+
+.origami-tile {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.origami-tile:hover {
+  transform: scale(1.05);
+}
+
+.origami-tile img {
+  width: 85%;          
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  margin: auto;        
+  padding: 1rem;        
+}
+
+.tile-label {
+  padding: 0.75rem;
+  font-weight: 600;
+  background-color: #000000;
+  font-size: 1rem;
+}
+
+.tile-crane {
+    background-color: rgba(255, 70, 23, 0.3); /* orange */
+    border-color: #FF4617;
+}
+
+.tile-chameleon {
+    background-color: rgba(0, 130, 206, 0.3); /* light blue */
+    border-color: #0082CE;
+}
+
+.tile-frog {
+    background-color: rgba(255, 236, 172, 0.3); /* yellow */
+    border-color: #FFECAC;
+}
+
+.tile-star {
+    background-color: rgba(255, 146, 221, 0.3); /* pink */
+    border-color: #FF92DD;
+}
+
+
+
