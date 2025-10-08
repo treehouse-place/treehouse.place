@@ -349,7 +349,7 @@ html, body {
     position: relative;
 }
 
-.who-we-are-content h2 {
+.section-title {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -468,24 +468,6 @@ html, body {
     background: #CFF6B3;
     padding: 4px 8px;
     border-radius: 4px;
-}
-
-.how-it-works-content h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #1C2629;
-    background: #FFF8F5;
-    border: 2px solid #594E45;
-    border-radius: 8px;
-    padding: 8px 32px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: "Inter", sans-serif;
-    text-transform: lowercase;
-    font-size: 1.1rem;
-    font-weight: 700;
 }
 
 .how-it-works-content p {
@@ -626,23 +608,10 @@ html, body {
     border: 1px solid #FFF8F5;
 }
 
-.connect-with-us-content h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+.connect-with-us-content .section-title {
     color: #FFF8F5;
     background: transparent;
     border: 2px solid #FFF8F5;
-    border-radius: 8px;
-    padding: 8px 18px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: "Inter", sans-serif;
-    text-transform: lowercase;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
 }
 
 .connect-with-us-content .contact-info {
@@ -772,7 +741,7 @@ html, body {
         letter-spacing: -0.04em;
     }
 
-    .who-we-are-content h2 {
+    .section-title {
         font-size: 1.6rem;
         margin-bottom: 0.8rem;
         text-align: left;
@@ -867,23 +836,6 @@ html, body {
         margin: 0.5rem 0 0 0;
     }
 
-    .how-it-works-content h2 {
-        font-size: 1.6rem;
-        margin-bottom: 0.8rem;
-        text-align: left;
-        background: #FFF8F5;
-        border: 1px solid #594E45;
-        border-radius: 8px;
-        padding: 8px 16px;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        font-family: "Shippori Mincho", serif;
-        text-transform: lowercase;
-        font-size: 1rem;
-        font-weight: 400;
-    }
-
     .how-it-works-content p {
         font-size: 1rem;
         line-height: 1.5;
@@ -902,23 +854,6 @@ html, body {
         width: 100%;
         padding: 0 0.5rem;
         box-sizing: border-box;
-    }
-
-    .connect-with-us-content h2 {
-        font-size: 1.6rem;
-        margin-bottom: 0.8rem;
-        text-align: left;
-        background: transparent;
-        border: 1px solid #1C2629;
-        border-radius: 8px;
-        padding: 8px 16px;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        font-family: "Shippori Mincho", serif;
-        text-transform: lowercase;
-        font-size: 1rem;
-        font-weight: 400;
     }
 
     .connect-with-us-content p {
@@ -1083,7 +1018,7 @@ html, body {
         letter-spacing: -0.04em;
     }
 
-    .who-we-are-content h2 {
+    .section-title {
         font-size: 1.4rem;
         margin-bottom: 0.8rem;
         text-align: left;
@@ -1096,7 +1031,6 @@ html, body {
         gap: 6px;
         font-family: "Shippori Mincho", serif;
         text-transform: lowercase;
-        font-size: 0.9rem;
         font-weight: 400;
     }
 
@@ -1183,23 +1117,6 @@ html, body {
         margin: 0.5rem 0 0 0;
     }
 
-    .how-it-works-content h2 {
-        font-size: 1.4rem;
-        margin-bottom: 0.8rem;
-        text-align: left;
-        background: #FFF8F5;
-        border: 1px solid #594E45;
-        border-radius: 8px;
-        padding: 6px 12px;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-family: "Shippori Mincho", serif;
-        text-transform: lowercase;
-        font-size: 0.9rem;
-        font-weight: 400;
-    }
-
     .how-it-works-content p {
         font-size: 0.9rem;
         line-height: 1.4;
@@ -1221,22 +1138,6 @@ html, body {
         box-sizing: border-box;
     }
 
-    .connect-with-us-content h2 {
-        font-size: 1.4rem;
-        margin-bottom: 0.8rem;
-        text-align: left;
-        background: transparent;
-        border: 1px solid #1C2629;
-        border-radius: 8px;
-        padding: 6px 12px;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-family: "Inter", sans-serif;
-        text-transform: lowercase;
-        font-size: 0.9rem;
-        font-weight: 400;
-    }
 
     .connect-with-us-content p {
         font-size: 0.9rem;

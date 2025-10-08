@@ -82,7 +82,7 @@ function App() {
 
       <section className="who-we-are-section">
         <div className="who-we-are-content">
-          <h2><IoHelpCircle /> who we are</h2>
+          <h2 className="section-title"><IoHelpCircle /> who we are</h2>
           <div className="who-we-are-text-container">
             <p className="who-we-are-intro">​Ideas grow better in the</p>
             <p className="who-we-are-left">treehouse — a creative</p>
@@ -102,7 +102,7 @@ function App() {
 
       <section className="how-it-works-section">
         <div className="how-it-works-content">
-          <h2><IoHelpCircle /> how it works</h2>
+          <h2 className="section-title"><IoHelpCircle /> how it works</h2>
           <div className="how-it-works-text-container">
             <div className="how-it-works-left">
               <div className="curved-text">
@@ -134,7 +134,7 @@ function App() {
       <section className="connect-with-us-section">
         {/* the text/content block */}
         <div className="connect-with-us-content">
-          <h2><IoMail /> connect with us</h2>
+          <h2 className="section-title"><IoMail /> connect with us</h2>
           <div className="connect-content">
             <div className="instagram-stack">
               <p id="connect-subtext-curved" className="connect-subtext">our instagram here</p>
