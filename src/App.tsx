@@ -114,7 +114,7 @@ function App() {
             <div className="how-it-works-right">
               <div className="process-text">
                 <span>then a</span>
-                <span className="highlighted-green">50 minutes</span>
+                <span className="highlighted-green">50 minute</span>
                 <span>work block,</span>
                 <br />
                 <span>break time,</span>
@@ -124,7 +124,7 @@ function App() {
                 <span>of work,</span>
                 <br />
                 <span>and demos!</span>
-                <p className="people-connect-text">People connect better when they get to talk about what matters most to them. Treehouse is a space for you to make stuff that you care about, away from school and work.</p>
+                <p className="people-connect-text">People connect better when they talk about what matters most to them. Treehouse is a space for you to make stuff that you care about, away from school and work.</p>
               </div>
             </div>
           </div>
@@ -172,7 +172,7 @@ function App() {
 
         {/* the image sits as a sibling, absolutely positioned behind */}
         <img
-          src="/about/blackgrid.png"
+          src="/about/blackgrid1.png"
           alt="Z Dimension Illustration"
           className="connect-image"
         />
