@@ -310,7 +310,7 @@ html, body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: #1C2629;
+    background: #4A5A4F;
     border: 1.5px solid #594E45;
     padding: 8px 38px;
     font-size: 1.1rem;
@@ -326,10 +326,51 @@ html, body {
 }
 
 .lock-in-button:hover {
-    background: #1C2629;
+    background: #A5B997;
     color: #FFF8F5;
     transform: translateY(-2px);
-    border-color: #1C2629;
+    border-color: #FFFFFF;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4);
+}
+
+.lock-in-button.star-shape {
+    background: #FFD700;
+    border-color: #FFD700;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1.2) rotate(0deg);
+    animation: starSpin 0.6s ease-in-out;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.8), 0 0 90px rgba(255, 215, 0, 0.6);
+}
+
+.lock-in-button.star-shape .star-icon {
+    font-size: 2.5rem;
+    display: block;
+}
+
+.lock-in-button.star-shape span:not(.star-icon),
+.lock-in-button.star-shape .lock-icon {
+    display: none;
+}
+
+@keyframes starSpin {
+    0% {
+        transform: scale(1) rotate(0deg);
+        border-radius: 8px;
+    }
+    50% {
+        transform: scale(1.3) rotate(180deg);
+        border-radius: 50%;
+    }
+    100% {
+        transform: scale(1.2) rotate(360deg);
+        border-radius: 50%;
+    }
 }
 
 .lock-icon {
@@ -491,11 +532,11 @@ html, body {
 .welcome-text-container .people-connect-text {
     font-family: "Inter", serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 48px;
     letter-spacing: -0.04em;
     color: #1C2629;
-    margin: -2rem -10rem 2rem -10rem;
+
     text-align: left;
     display: block;
 }
