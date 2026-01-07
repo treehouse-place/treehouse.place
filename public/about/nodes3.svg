@@ -1,10 +1,10 @@
-<svg width="203" height="216" viewBox="0 0 203 216" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line y1="-1" x2="177.751" y2="-1" transform="matrix(-0.778865 -0.627192 0.649735 -0.760161 140.444 111.484)" stroke="#A5B997" stroke-width="2"/>
-<line y1="-1" x2="105.135" y2="-1" transform="matrix(0.32189 0.946777 -0.952339 0.305042 137.367 111.484)" stroke="#A5B997" stroke-width="2"/>
-<line y1="-1" x2="60.3309" y2="-1" transform="matrix(-0.968892 -0.247483 0.261674 -0.965156 196.847 125.419)" stroke="#A5B997" stroke-width="2"/>
-<line y1="-1" x2="64.5961" y2="-1" transform="matrix(-0.381017 0.924568 -0.932205 -0.361931 68.6581 55.7419)" stroke="#A5B997" stroke-width="2"/>
-<ellipse cx="44.5587" cy="117.954" rx="5.64031" ry="5.47465" transform="rotate(180 44.5587 117.954)" fill="#A5B997"/>
-<ellipse cx="197.36" cy="125.917" rx="5.64031" ry="5.47465" transform="rotate(180 197.36 125.917)" fill="#A5B997"/>
-<ellipse cx="139.931" cy="112.977" rx="6.66582" ry="6.47005" transform="rotate(180 139.931 112.977)" fill="#A5B997"/>
-<ellipse cx="172.747" cy="211.521" rx="4.6148" ry="4.47926" transform="rotate(180 172.747 211.521)" fill="#A5B997"/>
+<svg width="285" height="267" viewBox="0 0 285 267" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="161.447" y1="179.311" x2="0.446914" y2="98.8516" stroke="#A5B997" stroke-width="2"/>
+<line y1="-1" x2="107.603" y2="-1" transform="matrix(0.994447 -0.105241 0.148312 0.988941 166.894 178.068)" stroke="#A5B997" stroke-width="2"/>
+<line y1="-1" x2="60.3309" y2="-1" transform="matrix(-0.697621 0.716467 -0.706153 -0.708059 198.982 135.232)" stroke="#A5B997" stroke-width="2"/>
+<line y1="-1" x2="64.5961" y2="-1" transform="matrix(0.0596915 0.998217 -0.996779 0.0801991 82.9543 140.416)" stroke="#A5B997" stroke-width="2"/>
+<ellipse cx="88.3558" cy="206.914" rx="5.64031" ry="5.47465" transform="rotate(154.181 88.3558 206.914)" fill="#A5B997"/>
+<ellipse cx="199.669" cy="135.035" rx="5.64031" ry="5.47465" transform="rotate(119.908 199.669 135.035)" fill="#A5B997"/>
+<ellipse cx="161.712" cy="178.144" rx="6.66582" ry="6.47005" transform="rotate(154.181 161.712 178.144)" fill="#A5B997"/>
+<ellipse cx="4.90248" cy="5.0846" rx="4.90248" ry="5.0846" transform="matrix(-0.622119 0.782923 -0.872237 -0.489084 282.894 164.39)" fill="#A5B997"/>
 </svg>

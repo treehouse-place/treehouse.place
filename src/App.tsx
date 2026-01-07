@@ -1,11 +1,22 @@
 import './App.css'
-import { useEffect } from "react";
-import { FaLocationDot } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { IoHelpCircle } from "react-icons/io5";
 import { IoMail } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 
 function App() {
+  const [isStar, setIsStar] = useState(false);
+  const navigate = useNavigate();
+
+  const handleButtonClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsStar(true);
+    setTimeout(() => {
+      navigate('/sessions');
+    }, 600);
+  };
+
   useEffect(() => {
     if ((window as any).CircleType) {
       new (window as any).CircleType(document.getElementById("curved-text")).radius(200);
@@ -53,31 +64,26 @@ function App() {
 
         <section className="content-section">
           <div className="content-top-logos">
-            <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
-          </div>
-          <p className="tagline">come inside and create with us</p>
-          <div className="event-details">
-            <div className="location-and-buttons">
-              <div className="location-info">
-                <div className="location">
-                  <FaLocationDot />
-                  <span>SFU Surrey</span>
-                </div>
-                <div className="schedule">
-                  <span>Every Thursday | 5pm to 8pm</span>
-                </div>
-              </div>
-              <div className="action-buttons">
-                <a href="https://luma.com/treehouse.place" target="_blank" rel="noopener noreferrer" className="lock-in-button">
-                  <span>Lock in with us</span>
-                  <span className="lock-icon">🔒</span>
-                </a>
-              </div>
+            <div className="logo-container">
+              <img src="/about/nodes6.svg" alt="Nodes" className="branch-logo-top" />
+              <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
             </div>
           </div>
-          <div className="hero-image-container">
-            <img src="/treehouse-hero.webp" alt="Treehouse Hero" className="treehouse-hero-image" />
+          <div className="hero-text-container">
+            <p className="hero-text">hosting weekly coworking sessions—</p>
+            <p className="hero-text">come inside and create with us!</p>
           </div>
+          <div className="action-buttons">
+            <a href="/sessions" className={`lock-in-button ${isStar ? 'star-shape' : ''}`} onClick={handleButtonClick}>
+              {isStar ? <span className="star-icon">☆</span> : (
+                <>
+                  <span>Lock in with us</span>
+                  <span className="lock-icon">🔒</span>
+                </>
+              )}
+            </a>
+          </div>
+          <img src="/about/ladder.svg" alt="Ladder" className="ladder-hero" />
         </section>
       </div>
 
@@ -87,8 +93,8 @@ function App() {
           <div className="who-we-are-text-container">
             <p className="who-we-are-intro">​Ideas grow better in the</p>
             <p className="who-we-are-left">treehouse — a creative</p>
-            <p className="who-we-are-left">coworking space</p>
-            <p className="who-we-are-left">quests and big dreams—</p>
+            <p className="who-we-are-left">coworking space for</p>
+            <p className="who-we-are-left">sidequests and big dreams—</p>
             <p className="who-we-are-right">for the artists, developers,</p>
             <p className="who-we-are-right">engineers, makers, and</p>
             <p className="who-we-are-right">everyone in between</p>
@@ -103,6 +109,15 @@ function App() {
 
       <section className="how-it-works-section">
         <div className="how-it-works-content">
+          <div className="welcome-text-container">
+            <div className="scrolling-banner">
+              <div className="scrolling-content">
+                <span className="people-connect-text">everyone is welcome here  ☆  free snacks provided  ☆  the third space you never knew you needed  ☆  impromptu hangout after?</span>
+                <span className="people-connect-text">everyone is welcome here  ☆  free snacks provided  ☆  the third space you never knew you needed  ☆  impromptu hangout after?</span>
+                <span className="people-connect-text">everyone is welcome here  ☆  free snacks provided  ☆  the third space you never knew you needed  ☆  impromptu hangout after?</span>
+              </div>
+            </div>
+          </div>
           <h2 className="section-title"><IoHelpCircle /> how it works</h2>
           <div className="how-it-works-text-container">
             <div className="how-it-works-left">
