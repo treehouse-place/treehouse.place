@@ -1,0 +1,178 @@
+.sessions-page {
+    min-height: 100vh;
+    background: #FFF8F5;
+    padding: 2rem;
+    font-family: "Shippori Mincho", serif;
+    position: relative;
+}
+
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.treehouse-hero-image {
+    max-width: 80%;
+    height: auto;
+    max-height: 400px;
+    background: transparent;
+    transform: translateY(-250%);
+    z-index: -1;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.sessions-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.back-link {
+    display: inline-block;
+    color: #1C2629;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+    opacity: 0.7;
+}
+
+.sessions-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1C2629;
+    margin-bottom: 3rem;
+    text-align: left;
+    font-family: "Shippori Mincho", serif;
+}
+
+.sessions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.session-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.session-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.8rem 1rem;
+    background: #FFF8F5;
+    border: 1px solid #1C2629;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: "Shippori Mincho", serif;
+    color: #000;
+}
+
+.session-item:hover {
+    background: #1C2629;
+    color: #FFF8F5;
+    transform: translateY(-2px);
+}
+
+.session-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+}
+
+.session-location {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.session-item:hover .session-location {
+    color: #FFF8F5;
+}
+
+.session-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.session-date {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #000;
+    opacity: 0.7;
+}
+
+.session-item:hover .session-date {
+    color: #FFF8F5;
+    opacity: 0.9;
+}
+
+.session-separator {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #000;
+    opacity: 0.7;
+}
+
+.session-item:hover .session-separator {
+    color: #FFF8F5;
+    opacity: 0.9;
+}
+
+.session-time {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #000;
+    opacity: 0.7;
+}
+
+.session-item:hover .session-time {
+    color: #FFF8F5;
+    opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+    .sessions-page {
+        padding: 1rem;
+    }
+
+    .sessions-container {
+        padding: 1rem 0;
+    }
+
+    .sessions-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .session-item {
+        padding: 0.8rem 1rem;
+    }
+
+    .session-location {
+        font-size: 1.3rem;
+    }
+
+    .session-date {
+        font-size: 0.85rem;
+    }
+
+    .session-time {
+        font-size: 0.85rem;
+    }
+}
+

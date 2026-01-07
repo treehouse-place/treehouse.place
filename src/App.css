@@ -9,7 +9,7 @@
         linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
     background-size: 200px, 200px, 200px, 200px, 200px, 50px 50px, 50px 50px;
-    background-position: left 15%, right 25%, left 65%, right 75%, left 45%, 0 0, 0 0;
+    background-position: left calc(15% + 50px), right 25%, left calc(65% + 50px), right 75%, left calc(45% - 40px), 0 0, 0 0;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
     max-width: 100vw;
     width: 100%;
@@ -56,10 +56,10 @@ html, body {
     width: 100vw;
     min-height: 100vh;
     max-width: 1500px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     position: relative;
-    overflow-x: hidden;  /* Prevent horizontal overflow */
+    overflow-x: visible;  /* Allow overflow for hero text */
     font-family: "Shippori Mincho", serif;
 }
 
@@ -69,7 +69,7 @@ html, body {
     min-height: 100vh;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 10rem;
 }
 
 /* Left - Treehouse section */
@@ -105,7 +105,7 @@ html, body {
 
 .content-section {
     flex: 2;
-    padding: 1rem;
+    padding: 1rem 0;
     color: #1C2629;
     position: relative;
     min-width: 0;
@@ -116,12 +116,13 @@ html, body {
     width: 100%;
     color: #1C2629;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     gap: 0.8rem;
+    overflow: visible;
 
     strong {
         color: #1C2629;
@@ -138,8 +139,27 @@ html, body {
     }
 }
 
+.logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.branch-logo-top {
+    position: absolute;
+    top: -130px;
+    left: 70%;
+    transform: translateX(-50%);
+    height: 200px;
+    width: auto;
+    z-index: 1;
+}
+
 .treehouse-logo {
-    height: 100px;
+    height: 150px;
+    position: relative;
+    z-index: 2;
 }
 
 .branch-logo {
@@ -153,6 +173,28 @@ html, body {
     font-weight: 900;
     text-align: center;
     font-family: "Shippori Mincho", serif;
+}
+
+.hero-text-container {
+    display: absolute;
+    justify-content: left;
+    align-items: left;
+    width: auto;
+    margin: 6rem 0 2rem 0;
+    padding: 0;
+    margin-left: -12rem;
+    position: relative;
+}
+
+.hero-text {
+    text-align: left;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -0.04em;
+    color: #1C2629;
+    margin: 0;
 }
 
 .session-photos {
@@ -199,8 +241,10 @@ html, body {
     flex-direction: column;
     gap: 1rem;
     flex: 1;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 .location-info {
@@ -213,7 +257,7 @@ html, body {
 .location{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0.5rem;
     font-size: 2rem;
     color: #1C2629;
@@ -223,6 +267,7 @@ html, body {
  .schedule {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 0.5rem;
     font-size: 1.25rem;
     color: #1C2629;
@@ -233,7 +278,10 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+    margin-top: -2rem;
 }
 
 .hero-image-container {
@@ -245,33 +293,35 @@ html, body {
 }
 
 .treehouse-hero-image {
-    max-width: 120%;
+    max-width: 80%;
     height: auto;
-    max-height: 600px;
+    max-height: 400px;
     background: transparent;
-    transform: scale(1.1);
+    transform: translateY(-250%);
     z-index: -1;
     position: absolute;
     opacity: 0.8;
-    top: 50%;
+    top: -8rem;
+    left: 50%;
 }
 
 .lock-in-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    background: #FFF8F5;
-    border: 1px solid #1C2629;
-    padding: 12px 20px;
-    font-size: 1rem;
-    color: #1C2629;
+    gap: 8px;
+    background: #1C2629;
+    border: 1.5px solid #594E45;
+    padding: 8px 38px;
+    font-size: 1.1rem;
+    color: #FFF8F5;
     text-decoration: none;
     border-radius: 8px;
     transition: all 0.3s ease;
-    font-family: inherit;
-    font-weight: 900;
-    width: 200px;
+    font-family: "Inter", sans-serif;
+    text-transform: lowercase;
+    font-weight: 700;
+    width: auto;
     box-sizing: border-box;
 }
 
@@ -279,6 +329,7 @@ html, body {
     background: #1C2629;
     color: #FFF8F5;
     transform: translateY(-2px);
+    border-color: #1C2629;
 }
 
 .lock-icon {
@@ -321,7 +372,7 @@ html, body {
     align-items: flex-start;
     width: 100%;
     padding: 2rem;
-    margin: 1rem 0 4rem 0;
+    margin: 1rem 0 2rem 0;
     border-radius: 10px;
     min-height: 40vh;
     background: transparent;
@@ -349,8 +400,8 @@ html, body {
     text-align: left;
     font-family: "Shippori Mincho", serif;
     font-weight: 500;
-    font-size: 36px;
-    line-height: 50px;
+    font-size: 32px;
+    line-height: 48px;
     letter-spacing: -0.04em;
 }
 
@@ -358,8 +409,8 @@ html, body {
     text-align: right;
     font-family: "Shippori Mincho", serif;
     font-weight: 500;
-    font-size: 36px;
-    line-height: 50px;
+    font-size: 32px;
+    line-height: 48px;
     letter-spacing: -0.04em;
 }
 
@@ -374,7 +425,7 @@ html, body {
     margin-bottom: 1rem;
     color: #1C2629;
     background: #FFF8F5;
-    border: 2px solid #594E45;
+    border: 1.5px solid #594E45;
     border-radius: 8px;
     padding: 8px 38px;
     display: inline-flex;
@@ -390,8 +441,8 @@ html, body {
     margin: 0;
     font-family: "Shippori Mincho", serif;
     font-weight: 500;
-    font-size: 36px;
-    line-height: 50px;
+    font-size: 32px;
+    line-height: 48px;
     letter-spacing: -0.04em;
     color: #1C2629;
 }
@@ -411,7 +462,7 @@ html, body {
     align-items: flex-start;
     width: 100%;
     padding: 2rem;
-    margin: 1rem 0 4rem 0;
+    margin: 0 0 4rem 0;
     border-radius: 10px;
     min-height: 40vh;
     background: transparent;
@@ -425,6 +476,39 @@ html, body {
     box-sizing: border-box;
     padding: 1rem 10rem;
     margin-bottom: 10rem;
+}
+
+.how-it-works-content .section-title {
+    border: 1.5px solid #594E45;
+}
+
+.welcome-text-container {
+    margin-bottom: 2rem;
+    margin-top: -100px;
+    width: 100%;
+}
+
+.welcome-text-container .people-connect-text {
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 48px;
+    letter-spacing: -0.04em;
+    color: #1C2629;
+    margin: -2rem -10rem 2rem -10rem;
+    text-align: left;
+    display: block;
+}
+
+.welcome-text {
+    font-family: "Inter", serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.04em;
+    color: #1C2629;
+    margin: 0;
+    text-align: left;
 }
 
 .how-it-works-text-container {
@@ -475,14 +559,15 @@ html, body {
 .process-text {
     font-family: "Shippori Mincho", serif;
     font-weight: 500;
-    font-size: 36px;
-    line-height: 50px;
+    font-size: 32px;
+    line-height: 48px;
     letter-spacing: -0.04em;
     color: #1C2629;
+    margin-top: 20px;
 }
 
 .how-it-works-right p {
-    margin-top: 4rem;
+    margin-top: 5rem;
     letter-spacing: 0;
     font-size: 2rem;
     font-family: "Inter", sans-serif;
@@ -560,8 +645,8 @@ html, body {
 .connect-text {
     font-family: "Shippori Mincho", serif;
     font-weight: 500;
-    font-size: 36px;
-    line-height: 50px;
+    font-size: 32px;
+    line-height: 48px;
     letter-spacing: -0.04em;
     color: #FFF8F5;
     margin: 0rem 4rem;
@@ -639,7 +724,7 @@ html, body {
 .connect-with-us-content .section-title {
     color: #FFF8F5;
     background: transparent;
-    border: 2px solid #FFF8F5;
+    border: 1.5px solid #FFF8F5;
 }
 
 .connect-with-us-content .contact-info {
@@ -652,7 +737,7 @@ html, body {
 
 .connect-image {
   position: absolute;
-  bottom: 20%; /* aligns it to bottom */
+  bottom: calc(20% - 96px); /* aligns it to bottom, moved 1 inch lower */
   left: 68%;
   transform: translateX(-50%);
   width: min(50vw, 500px);
@@ -746,8 +831,8 @@ html, body {
         text-align: left;
         font-family: "Shippori Mincho", serif;
         font-weight: 500;
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 32px;
+        line-height: 36px;
         letter-spacing: -0.04em;
     }
 
@@ -755,8 +840,8 @@ html, body {
         text-align: left;
         font-family: "Shippori Mincho", serif;
         font-weight: 500;
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 32px;
+        line-height: 36px;
         letter-spacing: -0.04em;
     }
 
@@ -780,8 +865,8 @@ html, body {
     .who-we-are-content p {
         font-family: "Shippori Mincho", serif;
         font-weight: 500;
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 32px;
+        line-height: 36px;
         letter-spacing: -0.04em;
         text-align: left;
     }

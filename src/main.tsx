@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App.tsx'
 import OrigamiStation from './components/OrigamiStation.tsx'
+import Sessions from './components/Sessions.tsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -11,6 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/origami-station" element={<OrigamiStation />} />
+        <Route path="/sessions" element={<Sessions />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
