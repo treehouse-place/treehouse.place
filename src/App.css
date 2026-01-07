@@ -156,6 +156,17 @@ html, body {
     z-index: 1;
 }
 
+.ladder-hero {
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+    height: auto;
+    width: auto;
+    max-height: 900px;
+    max-width: 600px;
+    z-index: 1;
+}
+
 .treehouse-logo {
     height: 150px;
     position: relative;
@@ -334,8 +345,8 @@ html, body {
 }
 
 .lock-in-button.star-shape {
-    background: #FFD700;
-    border-color: #FFD700;
+    background: transparent;
+    border: none;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -345,7 +356,7 @@ html, body {
     justify-content: center;
     transform: scale(1.2) rotate(0deg);
     animation: starSpin 0.6s ease-in-out;
-    box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.8), 0 0 90px rgba(255, 215, 0, 0.6);
+    box-shadow: none;
 }
 
 .lock-in-button.star-shape .star-icon {
@@ -524,9 +535,42 @@ html, body {
 }
 
 .welcome-text-container {
-    margin-bottom: 2rem;
-    margin-top: -100px;
+    margin-bottom: 6.5rem;
+    margin-top: -180px;
     width: 100%;
+    overflow: hidden;
+}
+
+.scrolling-banner {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scrolling-content {
+    display: inline-flex;
+    animation: scroll-horizontal 30s linear infinite;
+    gap: 2rem;
+}
+
+.scrolling-content .people-connect-text {
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 48px;
+    letter-spacing: -0.04em;
+    color: #1C2629;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.333%);
+    }
 }
 
 .welcome-text-container .people-connect-text {
@@ -536,7 +580,6 @@ html, body {
     line-height: 48px;
     letter-spacing: -0.04em;
     color: #1C2629;
-
     text-align: left;
     display: block;
 }

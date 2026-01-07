@@ -75,7 +75,7 @@ function App() {
           </div>
           <div className="action-buttons">
             <a href="/sessions" className={`lock-in-button ${isStar ? 'star-shape' : ''}`} onClick={handleButtonClick}>
-              {isStar ? <span className="star-icon">⭐</span> : (
+              {isStar ? <span className="star-icon">☆</span> : (
                 <>
                   <span>Lock in with us</span>
                   <span className="lock-icon">🔒</span>
@@ -83,6 +83,7 @@ function App() {
               )}
             </a>
           </div>
+          <img src="/about/ladder.svg" alt="Ladder" className="ladder-hero" />
         </section>
       </div>
 
@@ -109,7 +110,13 @@ function App() {
       <section className="how-it-works-section">
         <div className="how-it-works-content">
           <div className="welcome-text-container">
-          <p className="people-connect-text">everyone is welcome here  ☆  free snacks provided  ☆ the third space you never knew you needed  ☆  impromptu hangout after?</p>
+            <div className="scrolling-banner">
+              <div className="scrolling-content">
+                <span className="people-connect-text">everyone is welcome here  ☆  free snacks provided  ☆  the third space you never knew you needed  ☆  impromptu hangout after?</span>
+                <span className="people-connect-text">everyone is welcome here  ☆  free snacks provided  ☆  the third space you never knew you needed  ☆  impromptu hangout after?</span>
+                <span className="people-connect-text">everyone is welcome here  ☆  free snacks provided  ☆  the third space you never knew you needed  ☆  impromptu hangout after?</span>
+              </div>
+            </div>
           </div>
           <h2 className="section-title"><IoHelpCircle /> how it works</h2>
           <div className="how-it-works-text-container">

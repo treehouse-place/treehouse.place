@@ -2,46 +2,37 @@ import { Link } from 'react-router-dom';
 import './Sessions.css';
 
 export default function Sessions() {
-  // Calculate the next 6 Thursdays
-  const getNextThursdays = () => {
-    const thursdays = [];
-    const today = new Date();
-    
-    // Find the next Thursday
-    const daysUntilThursday = (4 - today.getDay() + 7) % 7 || 7;
-    let nextThursday = new Date(today);
-    nextThursday.setDate(today.getDate() + daysUntilThursday);
-    
-    // If today is Thursday and it's before 5pm, use today; otherwise use next Thursday
-    if (today.getDay() === 4 && today.getHours() < 17) {
-      nextThursday = new Date(today);
-    }
-    
-    // Generate 6 Thursdays
-    for (let i = 0; i < 6; i++) {
-      const thursday = new Date(nextThursday);
-      thursday.setDate(nextThursday.getDate() + (i * 7));
-      thursdays.push(thursday);
-    }
-    
-    return thursdays;
-  };
-
   const formatDate = (date: Date) => {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 
                     'July', 'August', 'September', 'October', 'November', 'December'];
+    const dayName = days[date.getDay()];
     const day = date.getDate();
     const month = months[date.getMonth()];
-    const year = date.getFullYear();
-    return `${month} ${day}, ${year}`;
+    return `${dayName}, ${month} ${day}`;
   };
 
-  const sessions = getNextThursdays();
-  
-  // Alternate between Burnaby and Surrey
-  const getLocation = (index: number) => {
-    return index % 2 === 0 ? 'Burnaby' : 'Surrey';
-  };
+  // Sessions with specific dates, links and locations
+  // January 12, 2026 is a Monday
+  // January 23, 2026 is a Friday  
+  // January 26, 2026 is a Monday
+  const sessions = [
+    {
+      date: new Date(2026, 0, 12), // Monday, January 12, 2026
+      location: 'Surrey',
+      link: 'https://luma.com/uftomvcm'
+    },
+    {
+      date: new Date(2026, 0, 23), // Friday, January 23, 2026
+      location: 'Burnaby',
+      link: 'https://luma.com/698lcj7g'
+    },
+    {
+      date: new Date(2026, 0, 26), // Monday, January 26, 2026
+      location: 'Surrey',
+      link: 'https://luma.com/x5zcki5j'
+    }
+  ];
 
   return (
     <div className="sessions-page">
@@ -55,16 +46,16 @@ export default function Sessions() {
           {sessions.map((session, index) => (
             <a
               key={index}
-              href="https://luma.com/treehouse.place"
+              href={session.link}
               target="_blank"
               rel="noopener noreferrer"
               className="session-link"
             >
               <div className="session-item">
                 <div className="session-content">
-                  <span className="session-location">{getLocation(index)}</span>
+                  <span className="session-location">{session.location}</span>
                   <div className="session-details">
-                    <span className="session-date">{formatDate(session)}</span>
+                    <span className="session-date">{formatDate(session.date)}</span>
                     <span className="session-separator">|</span>
                     <span className="session-time">5pm - 8pm</span>
                   </div>
