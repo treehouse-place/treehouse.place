@@ -13,24 +13,30 @@ export default function Sessions() {
   };
 
   // Sessions with specific dates, links and locations
-  // January 12, 2026 is a Monday
-  // January 23, 2026 is a Friday  
-  // January 26, 2026 is a Monday
+  // February 6, 2026 is a Friday
+  // February 9, 2026 is a Monday
+  // February 20, 2026 is a Friday
+  // February 23, 2026 is a Monday
   const sessions = [
     {
-      date: new Date(2026, 0, 12), // Monday, January 12, 2026
-      location: 'Surrey',
-      link: 'https://luma.com/uftomvcm'
+      date: new Date(2026, 1, 6), // Friday, February 6, 2026
+      location: 'East Tower, SFU Burnaby',
+      link: 'https://luma.com/e6fxwjia'
     },
     {
-      date: new Date(2026, 0, 23), // Friday, January 23, 2026
-      location: 'Burnaby',
-      link: 'https://luma.com/698lcj7g'
+      date: new Date(2026, 1, 9), // Monday, February 9, 2026
+      location: 'SRYE 5050, SFU Surrey',
+      link: 'https://luma.com/lexxeyy4'
     },
     {
-      date: new Date(2026, 0, 26), // Monday, January 26, 2026
-      location: 'Surrey',
-      link: 'https://luma.com/x5zcki5j'
+      date: new Date(2026, 1, 20), // Friday, February 20, 2026
+      location: 'East Tower, SFU Burnaby',
+      link: 'https://luma.com/meo2rle8'
+    },
+    {
+      date: new Date(2026, 1, 23), // Monday, February 23, 2026
+      location: 'SRYE 5050, SFU Surrey',
+      link: 'https://luma.com/mdys22f6'
     }
   ];
 

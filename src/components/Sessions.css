@@ -1,6 +1,6 @@
 .sessions-page {
     min-height: 100vh;
-    background: #FFF8F5;
+    background: #FFE4E6;
     padding: 2rem;
     font-family: "Shippori Mincho", serif;
     position: relative;
@@ -33,7 +33,7 @@
 
 .back-link {
     display: inline-block;
-    color: #1C2629;
+    color: #C41E3A;
     text-decoration: none;
     font-size: 1.2rem;
     margin-bottom: 3rem;
@@ -48,7 +48,7 @@
 .sessions-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1C2629;
+    color: #C41E3A;
     margin-bottom: 3rem;
     text-align: left;
     font-family: "Shippori Mincho", serif;
@@ -71,17 +71,17 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0.8rem 1rem;
-    background: #FFF8F5;
-    border: 1px solid #1C2629;
+    background: #FFE4E6;
+    border: 1px solid #C41E3A;
     border-radius: 8px;
     transition: all 0.3s ease;
     font-family: "Shippori Mincho", serif;
-    color: #000;
+    color: #C41E3A;
 }
 
 .session-item:hover {
-    background: #1C2629;
-    color: #FFF8F5;
+    background: #C41E3A;
+    color: #FFE4E6;
     transform: translateY(-2px);
 }
 
@@ -95,11 +95,11 @@
 .session-location {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #000;
+    color: #C41E3A;
 }
 
 .session-item:hover .session-location {
-    color: #FFF8F5;
+    color: #FFE4E6;
 }
 
 .session-details {
@@ -112,36 +112,36 @@
 .session-date {
     font-size: 0.9rem;
     font-weight: 400;
-    color: #000;
+    color: #C41E3A;
     opacity: 0.7;
 }
 
 .session-item:hover .session-date {
-    color: #FFF8F5;
+    color: #FFE4E6;
     opacity: 0.9;
 }
 
 .session-separator {
     font-size: 0.9rem;
     font-weight: 400;
-    color: #000;
+    color: #C41E3A;
     opacity: 0.7;
 }
 
 .session-item:hover .session-separator {
-    color: #FFF8F5;
+    color: #FFE4E6;
     opacity: 0.9;
 }
 
 .session-time {
     font-size: 0.9rem;
     font-weight: 400;
-    color: #000;
+    color: #C41E3A;
     opacity: 0.7;
 }
 
 .session-item:hover .session-time {
-    color: #FFF8F5;
+    color: #FFE4E6;
     opacity: 0.9;
 }
 
