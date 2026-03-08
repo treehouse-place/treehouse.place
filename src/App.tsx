@@ -56,34 +56,37 @@ function App() {
   return (
     <div className="showcase">
       <div className="main-content">
-        {/* <section className="image-section">
-          <div className="image-placeholder">
-            <p>Treehouse Image</p>
+        <section className="hero-row">
+          <div className="hero-image-left">
+            <img src="/treehouse-hero.webp" alt="Treehouse" className="treehouse-hero-left" />
           </div>
-        </section> */}
 
-        <section className="content-section">
-          <div className="content-top-logos">
-            <div className="logo-container">
-              <img src="/about/nodes6.svg" alt="Nodes" className="branch-logo-top" />
-              <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
+          <div className="content-section">
+            <div className="content-top-logos">
+              <div className="logo-container">
+                <img src="/about/nodes6.svg" alt="Nodes" className="branch-logo-top" />
+                <img src="/treehouse.svg" alt="Treehouse" className="treehouse-logo" />
+              </div>
+            </div>
+            <div className="hero-text-container">
+              <p className="hero-text">hosting weekly coworking sessions—</p>
+              <p className="hero-text">come inside and create with us!</p>
+            </div>
+            <div className="action-buttons">
+              <a href="/sessions" className={`lock-in-button ${isStar ? 'star-shape' : ''}`} onClick={handleButtonClick}>
+                {isStar ? <span className="star-icon">☆</span> : (
+                  <>
+                    <span>Lock in with us</span>
+                    <span className="lock-icon">🔒</span>
+                  </>
+                )}
+              </a>
             </div>
           </div>
-          <div className="hero-text-container">
-            <p className="hero-text">hosting weekly coworking sessions—</p>
-            <p className="hero-text">come inside and create with us!</p>
+
+          <div className="hero-image-right">
+            <img src="/about/ladder.svg" alt="Ladder" className="ladder-hero" />
           </div>
-          <div className="action-buttons">
-            <a href="/sessions" className={`lock-in-button ${isStar ? 'star-shape' : ''}`} onClick={handleButtonClick}>
-              {isStar ? <span className="star-icon">☆</span> : (
-                <>
-                  <span>Lock in with us</span>
-                  <span className="lock-icon">🔒</span>
-                </>
-              )}
-            </a>
-          </div>
-          <img src="/about/ladder.svg" alt="Ladder" className="ladder-hero" />
         </section>
       </div>
 
