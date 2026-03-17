@@ -57,10 +57,6 @@ function App() {
     <div className="showcase">
       <div className="main-content">
         <section className="hero-row">
-          <div className="hero-image-left">
-            <img src="/treehouse-hero.webp" alt="Treehouse" className="treehouse-hero-left" />
-          </div>
-
           <div className="content-section">
             <div className="content-top-logos">
               <div className="logo-container">
@@ -193,6 +189,12 @@ function App() {
           src="/about/blackgrid1.png"
           alt="Z Dimension Illustration"
           className="connect-image"
+        />
+        {/* Treehouse hero over the black grid at the bottom */}
+        <img
+          src="/treehouse-hero.webp"
+          alt="Treehouse"
+          className="treehouse-hero-over-grid"
         />
         <a href="/origami-station" target="_blank" rel="noopener noreferrer" className="lock-in-button mystery-button">
           <span>Mystery button!</span>
