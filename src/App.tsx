@@ -71,7 +71,7 @@ function App() {
                   <p className="hero-text">come inside and create with us!</p>
                 </div>
                 <div className="action-buttons">
-                  <a href="/sessions" className={`lock-in-button ${isStar ? 'star-shape' : ''}`} onClick={handleButtonClick}>
+                  <a href="https://luma.com/treehouse.place" className={`lock-in-button ${isStar ? 'star-shape' : ''}`} target="_blank" rel="noopener noreferrer">
                     {isStar ? <span className="star-icon">☆</span> : (
                       <>
                         <span>Lock in with us</span>
