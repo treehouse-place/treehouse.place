@@ -1,22 +1,10 @@
 import './App.css'
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { IoHelpCircle } from "react-icons/io5";
 import { IoMail } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 
 function App() {
-  const [isStar, setIsStar] = useState(false);
-  const navigate = useNavigate();
-
-  const handleButtonClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    setIsStar(true);
-    setTimeout(() => {
-      navigate('/sessions');
-    }, 600);
-  };
-
   useEffect(() => {
     if ((window as any).CircleType) {
       new (window as any).CircleType(document.getElementById("curved-text")).radius(200);
@@ -71,13 +59,9 @@ function App() {
                   <p className="hero-text">come inside and create with us!</p>
                 </div>
                 <div className="action-buttons">
-                  <a href="https://luma.com/treehouse.place" className={`lock-in-button ${isStar ? 'star-shape' : ''}`} target="_blank" rel="noopener noreferrer">
-                    {isStar ? <span className="star-icon">☆</span> : (
-                      <>
-                        <span>Lock in with us</span>
-                        <span className="lock-icon">🔒</span>
-                      </>
-                    )}
+                  <a href="https://luma.com/treehouse.place" className={`lock-in-button`} target="_blank" rel="noopener noreferrer">
+                    <span>Lock in with us</span>
+                    <span className="lock-icon">🔒</span>
                   </a>
                 </div>
               </div>
