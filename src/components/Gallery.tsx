@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Gallery.css';
 
 // Dynamically import all images from term folders inside the public gallery directory
-const imageModules = import.meta.glob('/public/gallery/*/*.{jpg,JPG,jpeg,png,webp}');
+const imageModules = import.meta.glob('/public/gallery/*/*.{jpg,JPG,jpeg,png,webp,mp4,MP4}');
 
 // Process paths into a record mapping term -> photo public urls
 const galleryData = Object.keys(imageModules).reduce((acc, path) => {
@@ -49,13 +49,17 @@ export default function Gallery() {
   const navigate = useNavigate();
   // By default, select the latest term, which is the last in the chronological array
   const [selectedTerm, setSelectedTerm] = useState(terms[terms.length - 1]);
+  const [loadedTerms, setLoadedTerms] = useState<Set<string>>(new Set([terms[terms.length - 1]]));
   const scrollContainerRef = useRef<HTMLUListElement>(null);
   const termRefs = useRef<Record<string, HTMLLIElement | null>>({});
 
-  const currentPhotos = galleryData[selectedTerm] || [];
-
-  // When selected term changes, scroll it into view
+  // When selected term changes, scroll it into view and track loaded state
   useEffect(() => {
+    setLoadedTerms(prev => {
+      if (prev.has(selectedTerm)) return prev;
+      return new Set(prev).add(selectedTerm);
+    });
+
     const el = termRefs.current[selectedTerm];
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
@@ -96,18 +100,42 @@ export default function Gallery() {
       </nav>
 
       <main className="gallery-main-content">
-        <div className="masonry-grid">
-          {currentPhotos.map((photoUrl, i) => (
-            <div key={i} className="masonry-item">
-              <img
-                src={photoUrl}
-                alt={`${formatTerm(selectedTerm)} memory ${i + 1}`}
-                loading="lazy"
-                className="gallery-image"
-              />
+        {Array.from(loadedTerms).map(term => {
+          const termPhotos = galleryData[term] || [];
+          return (
+            <div
+              key={term}
+              className="masonry-grid"
+              style={{ display: term === selectedTerm ? 'block' : 'none' }}
+            >
+              {termPhotos.map((photoUrl, i) => {
+                const mediaIsVideo = photoUrl.toLowerCase().endsWith('.mp4');
+                return (
+                  <div key={i} className="masonry-item">
+                    {mediaIsVideo ? (
+                      <video
+                        src={photoUrl}
+                        loop
+                        muted
+                        playsInline
+                        className="gallery-image"
+                        onMouseEnter={(e) => e.currentTarget.play()}
+                        onMouseLeave={(e) => e.currentTarget.pause()}
+                      />
+                    ) : (
+                      <img
+                        src={photoUrl}
+                        alt={`${formatTerm(term)} memory ${i + 1}`}
+                        loading="lazy"
+                        className="gallery-image"
+                      />
+                    )}
+                  </div>
+                );
+              })}
             </div>
-          ))}
-        </div>
+          );
+        })}
       </main>
     </div>
   );
