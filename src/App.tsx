@@ -63,6 +63,10 @@ function App() {
                     <span>Lock in with us</span>
                     <span className="lock-icon">🔒</span>
                   </a>
+                  <a href="/gallery" className="lock-in-button secondary">
+                    <span>Stalk us</span>
+                    <span className="lock-icon">👀</span>
+                  </a>
                 </div>
               </div>
               <div className="hero-image-ladder">

@@ -289,9 +289,11 @@ body {
 
 .action-buttons {
     display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
     align-items: center;
+    justify-content: flex-start;
     width: 100%;
     padding: 0;
     margin-top: 0;
@@ -344,6 +346,19 @@ body {
     transform: translateY(-2px);
     border-color: #FFFFFF;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4);
+}
+
+.lock-in-button.secondary {
+    background: #FFF8F5;
+    color: #4A5A4F;
+    border: 1.5px solid #594E45;
+}
+
+.lock-in-button.secondary:hover {
+    background: #E4E3E1;
+    color: #1C2629;
+    border-color: #1C2629;
+    box-shadow: 0 0 10px rgba(28, 38, 41, 0.2);
 }
 
 .lock-in-button.star-shape {
@@ -474,6 +489,7 @@ body {
 
     .action-buttons {
         order: 4;
+        justify-content: center;
     }
 }
 
