@@ -55,12 +55,12 @@ function App() {
                   </div>
                 </div>
                 <div className="hero-text-container">
-                  <p className="hero-text">hosting weekly coworking sessions—</p>
+                  <p className="hero-text">weekly coworking space for your passion projects</p>
                   <p className="hero-text">come inside and create with us!</p>
                 </div>
                 <div className="action-buttons">
                   <a href="https://luma.com/treehouse.place" className={`lock-in-button`} target="_blank" rel="noopener noreferrer">
-                    <span>Lock in with us</span>
+                    <span>Attend a session</span>
                     <span className="lock-icon">🔒</span>
                   </a>
                   <a href="/gallery" className="lock-in-button secondary">
